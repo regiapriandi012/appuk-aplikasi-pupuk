@@ -22,12 +22,12 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="329dp"
+        android:layout_width="304dp"
         android:layout_height="102dp"
         android:text="@string/appuk_subtitle"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,8 +36,8 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="379dp"
-        android:layout_height="52dp"
+        android:layout_width="340dp"
+        android:layout_height="61dp"
         android:backgroundTint="@color/white"
         android:text="Get Started"
         android:textColor="#4CAD73"
@@ -45,9 +45,10 @@
         app:cornerRadius="20px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.715" />
+        app:layout_constraintVertical_bias="0.793" />
 
     <ImageView
         android:id="@+id/imageView2"

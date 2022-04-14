@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "298120390768",
+    "project_id": "appuk-347212",
+    "storage_bucket": "appuk-347212.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298120390768:android:a7d6c8f6ce384fbbfcacb5",
+        "android_client_info": {
+          "package_name": "com.kofar.appuk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298120390768-ol7e8b5cqft5cjv1unbee4f2icik3fem.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8PDzqncHJFDZm_2aUgnP-y7rM3wN5D_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "298120390768-ol7e8b5cqft5cjv1unbee4f2icik3fem.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

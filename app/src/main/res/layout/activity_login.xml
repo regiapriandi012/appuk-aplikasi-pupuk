@@ -17,6 +17,7 @@
             android:layout_height="542dp"
             android:layout_marginBottom="404dp"
             android:background="@drawable/logos"
+            android:shadowColor="#4CAD73"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
@@ -25,7 +26,7 @@
             app:layout_constraintVertical_bias="1.0" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/appuk_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="APPUK"
@@ -35,20 +36,22 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.113" />
+            app:layout_constraintVertical_bias="0.081" />
 
         <Button
             android:id="@+id/button_login"
-            android:layout_width="379dp"
-            android:layout_height="52dp"
+            android:layout_width="340dp"
+            android:layout_height="61dp"
             android:backgroundTint="#4CAD73"
             android:text="Login"
             android:textColor="#FFFFFF"
+            app:cornerRadius="20px"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.87" />
+            app:layout_constraintVertical_bias="0.887" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -64,30 +67,36 @@
 
         <EditText
             android:id="@+id/editTextTextPersonName"
-            android:layout_width="379dp"
-            android:layout_height="52dp"
+            android:layout_width="340dp"
+            android:layout_height="61dp"
+            android:background="@drawable/text_view"
             android:ems="10"
+            android:hint="Username"
             android:inputType="textPersonName"
-            android:text="Username"
+            android:outlineAmbientShadowColor="#4CAD73"
+            android:outlineSpotShadowColor="#4CAD73"
+            android:shadowColor="#4CAD73"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.66" />
+            app:layout_constraintVertical_bias="0.656" />
 
         <EditText
             android:id="@+id/editTextTextPassword"
-            android:layout_width="379dp"
-            android:layout_height="52dp"
+            android:layout_width="340dp"
+            android:layout_height="61dp"
+            android:background="@drawable/text_view"
             android:ems="10"
-            android:text="Password"
+            android:hint="Password"
             android:inputType="textPassword"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.406"
+            app:layout_constraintHorizontal_bias="0.492"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.741" />
+            app:layout_constraintVertical_bias="0.753" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -115,7 +124,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.113" />
+        app:layout_constraintVertical_bias="0.081" />
 
     <ImageView
         android:id="@+id/imageView3"

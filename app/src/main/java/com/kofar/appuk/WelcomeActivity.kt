@@ -1,10 +1,8 @@
 package com.kofar.appuk
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -13,9 +11,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 
-
-class AkunActivity : AppCompatActivity() {
-
+class WelcomeActivity : AppCompatActivity() {
     // declare the GoogleSignInClient
     lateinit var mGoogleSignInClient: GoogleSignInClient
 
@@ -25,7 +21,7 @@ class AkunActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_akun)
+        setContentView(R.layout.activity_welcome)
         supportActionBar?.hide()
 
         // call requestIdToken as follows
@@ -35,7 +31,7 @@ class AkunActivity : AppCompatActivity() {
             .build()
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
 
-        findViewById<Button>(R.id.button_logout).setOnClickListener {
+        findViewById<Button>(R.id.button_logout_welcome).setOnClickListener {
             mGoogleSignInClient.signOut().addOnCompleteListener {
                 val intent = Intent(this, MainActivity::class.java)
                 Toast.makeText(this, "Logging Out", Toast.LENGTH_SHORT).show()
@@ -45,15 +41,9 @@ class AkunActivity : AppCompatActivity() {
         }
 
         val acct = GoogleSignIn.getLastSignedInAccount(this)
-        if(acct != null) {
-            val personImage = acct.photoUrl.toString()
-            findViewById<ImageView>(R.id.image_profile).setImageURI(Uri.parse("$personImage"))
-            findViewById<ImageView>(R.id.image_profile).postInvalidate()
+        if (acct != null) {
             val personName = acct.displayName
-            findViewById<TextView>(R.id.name).setText(personName)
-            val personEmail = acct.email
-            findViewById<TextView>(R.id.email).setText(personEmail)
+            findViewById<TextView>(R.id.welcome_text).setText(personName)
         }
-
     }
 }

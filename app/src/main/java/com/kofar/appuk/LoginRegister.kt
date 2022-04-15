@@ -128,7 +128,7 @@ class LoginRegister : AppCompatActivity() {
             if (task.isSuccessful) {
                 SavedPreference.setEmail(this, account.email.toString())
                 SavedPreference.setUsername(this, account.displayName.toString())
-                val intent = Intent(this, AkunActivity::class.java)
+                val intent = Intent(this, WelcomeActivity::class.java)
                 startActivity(intent)
                 finish()
             }
@@ -140,7 +140,7 @@ class LoginRegister : AppCompatActivity() {
         if (GoogleSignIn.getLastSignedInAccount(this) != null) {
             startActivity(
                 Intent(
-                    this, AkunActivity::class.java
+                    this, WelcomeActivity::class.java
                 )
             )
             finish()

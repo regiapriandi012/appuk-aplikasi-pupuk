@@ -29,7 +29,7 @@ class LoginRegister : AppCompatActivity() {
         supportActionBar?.hide()
         setContentView(R.layout.activity_login_register)
 
-        findViewById<Button>(R.id.button_login).setOnClickListener {
+        findViewById<Button>(R.id.register_button).setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }

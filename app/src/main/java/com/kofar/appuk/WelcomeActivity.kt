@@ -19,10 +19,17 @@ class WelcomeActivity : AppCompatActivity() {
         FirebaseAuth.getInstance()
     }
 
+    companion object {
+        const val EXTRA_NAMA = "extra_nama"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
         supportActionBar?.hide()
+
+        val nama = intent.getStringExtra(EXTRA_NAMA)
+        findViewById<TextView>(R.id.welcome_text).text = "$nama"
 
         // call requestIdToken as follows
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)

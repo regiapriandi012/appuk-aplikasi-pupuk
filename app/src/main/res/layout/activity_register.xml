@@ -32,21 +32,8 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="1.0" />
 
-            <TextView
-                android:id="@+id/appuk_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="APPUK"
-                android:textColor="#FFFFFF"
-                android:textSize="48sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.081" />
-
             <Button
-                android:id="@+id/button_login"
+                android:id="@+id/register_button"
                 android:layout_width="340dp"
                 android:layout_height="61dp"
                 android:backgroundTint="#4CAD73"
@@ -83,7 +70,7 @@
                 tools:layout_editor_absoluteY="67dp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/nama"
                 android:layout_width="340dp"
                 android:layout_height="61dp"
                 android:background="@drawable/text_view"
@@ -101,7 +88,7 @@
                 app:layout_constraintVertical_bias="0.582" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName3"
+                android:id="@+id/username"
                 android:layout_width="340dp"
                 android:layout_height="61dp"
                 android:background="@drawable/text_view"
@@ -119,7 +106,7 @@
                 app:layout_constraintVertical_bias="0.672" />
 
             <EditText
-                android:id="@+id/editTextTextPassword2"
+                android:id="@+id/password1"
                 android:layout_width="340dp"
                 android:layout_height="61dp"
                 android:background="@drawable/text_view"
@@ -134,7 +121,7 @@
                 app:layout_constraintVertical_bias="0.76" />
 
             <EditText
-                android:id="@+id/editTextTextPassword3"
+                android:id="@+id/password2"
                 android:layout_width="340dp"
                 android:layout_height="61dp"
                 android:background="@drawable/text_view"

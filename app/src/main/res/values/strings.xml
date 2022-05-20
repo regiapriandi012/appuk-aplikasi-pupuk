@@ -3,4 +3,45 @@
     <string name="appuk_title">APPUK</string>
     <string name="appuk_subtitle">Aplikasi jual beli dan informasi mengenai pupuk serta obat-obatan atau pestisida untuk pertanian</string>
 
+    <string-array name="data_nama_pupuk">
+        <item>UREA PUPUK INDONESIA</item>
+        <item>UREA GRANUL DAUN BUAH</item>
+        <item>UREA PRILL DAUN BUAH</item>
+        <item>NPK KHUSUS KHUSUS</item>
+        <item>ECOFERT</item>
+        <item>BIOTARA</item>
+        <item>BIODEX</item>
+        <item>BIOLK</item>
+        <item>BIO SALIN</item>
+        <item>NPK PHONSKA</item>
+        <item>ZA</item>
+    </string-array>
+
+    <string-array name="data_harga_pupuk">
+        <item>Rp.452.000,00</item>
+        <item>Rp.240.000,00</item>
+        <item>Rp.553.000,00</item>
+        <item>Rp.349.000,00</item>
+        <item>Rp.265.000,00</item>
+        <item>Rp.673.000,00</item>
+        <item>Rp.925.000,00</item>
+        <item>Rp.223.000,00</item>
+        <item>Rp.591.000,00</item>
+        <item>Rp.789.000,00</item>
+        <item>Rp.452.000,00</item>
+    </string-array>
+
+    <string-array name="data_gambar_pupuk">
+        <item>https://pupukkaltim.com/uploads/2142883157.png</item>
+        <item>https://pupukkaltim.com/uploads/1416407749.jpg</item>
+        <item>https://pupukkaltim.com/uploads/944759333.jpg</item>
+        <item>https://www.pupukkaltim.com/uploads/1446545685.png</item>
+        <item>https://www.pupukkaltim.com/uploads/1729642109.jpg</item>
+        <item>https://www.pupukkaltim.com/uploads/581446844.png</item>
+        <item>https://www.pupukkaltim.com/uploads/869617463.jpg</item>
+        <item>https://www.pupukkaltim.com/uploads/735796417.png</item>
+        <item>https://www.pupukkaltim.com/uploads/854891464.png</item>
+        <item>https://www.pupuk-kujang.co.id/images/PHONSKA-NEW-NoPengaduan-copy-copy.png</item>
+        <item>https://storage.googleapis.com/pkg-portal-bucket/_productThumb/pg_subnonsub_za.png</item>
+    </string-array>
 </resources>

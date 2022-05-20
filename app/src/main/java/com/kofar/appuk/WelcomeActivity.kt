@@ -6,6 +6,8 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -49,6 +51,11 @@ class WelcomeActivity : AppCompatActivity() {
 
         val acct = GoogleSignIn.getLastSignedInAccount(this)
         if (acct != null) {
+            val personImage = acct.photoUrl.toString()
+            Glide.with(this)
+                .load(personImage)
+                .apply(RequestOptions().override(700, 700))
+                .into(findViewById(R.id.image_profile_welcome))
             val personName = acct.displayName
             findViewById<TextView>(R.id.welcome_text).setText(personName)
         }

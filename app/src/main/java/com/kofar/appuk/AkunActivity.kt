@@ -46,17 +46,24 @@ class AkunActivity : AppCompatActivity() {
             }
         }
 
+        findViewById<Button>(R.id.tombol_kembali_akun).setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
+
         val acct = GoogleSignIn.getLastSignedInAccount(this)
         if(acct != null) {
             val personImage = acct.photoUrl.toString()
+            val personEmail = acct.email.toString()
             Glide.with(this)
                 .load(personImage)
-                .apply(RequestOptions().override(700, 700))
+                .apply(RequestOptions().override(300, 300))
                 .into(findViewById(R.id.image_profile))
-            findViewById<ImageView>(R.id.image_profile).setImageURI(Uri.parse("$personImage"))
+            findViewById<ImageView>(R.id.image_profile).setImageURI(Uri.parse(personImage))
             findViewById<ImageView>(R.id.image_profile).postInvalidate()
             val personName = acct.displayName
-            findViewById<TextView>(R.id.welcome_name_account).setText(personName)
+            findViewById<TextView>(R.id.welcome_name_account).text = personName
+            findViewById<TextView>(R.id.email_akun).text = personEmail
 
     }
 }

@@ -49,6 +49,11 @@ class WelcomeActivity : AppCompatActivity() {
             }
         }
 
+        findViewById<Button>(R.id.button_next_welcome).setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
+
         val acct = GoogleSignIn.getLastSignedInAccount(this)
         if (acct != null) {
             val personImage = acct.photoUrl.toString()
@@ -57,7 +62,7 @@ class WelcomeActivity : AppCompatActivity() {
                 .apply(RequestOptions().override(700, 700))
                 .into(findViewById(R.id.image_profile_welcome))
             val personName = acct.displayName
-            findViewById<TextView>(R.id.welcome_text).setText(personName)
+            findViewById<TextView>(R.id.welcome_text).text = personName
         }
     }
 }

@@ -44,8 +44,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.492"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.968" />
+                app:layout_constraintTop_toBottomOf="@+id/password2" />
 
             <ImageView
                 android:id="@+id/imageView"
@@ -76,6 +75,8 @@
                 android:id="@+id/nama"
                 android:layout_width="340dp"
                 android:layout_height="61dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/text_view"
                 android:ems="10"
                 android:hint="Nama"
@@ -83,17 +84,17 @@
                 android:outlineAmbientShadowColor="#4CAD73"
                 android:outlineSpotShadowColor="#4CAD73"
                 android:shadowColor="#4CAD73"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/username"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.49"
+                app:layout_constraintHorizontal_bias="0.492"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.582" />
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
             <EditText
                 android:id="@+id/username"
                 android:layout_width="340dp"
                 android:layout_height="61dp"
+                android:layout_marginTop="12dp"
                 android:background="@drawable/text_view"
                 android:ems="10"
                 android:hint="Username"
@@ -101,42 +102,40 @@
                 android:outlineAmbientShadowColor="#4CAD73"
                 android:outlineSpotShadowColor="#4CAD73"
                 android:shadowColor="#4CAD73"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.49"
+                app:layout_constraintHorizontal_bias="0.492"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.672" />
+                app:layout_constraintTop_toBottomOf="@+id/nama" />
 
             <EditText
                 android:id="@+id/password1"
                 android:layout_width="340dp"
                 android:layout_height="61dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/text_view"
                 android:ems="10"
                 android:hint="Password"
                 android:inputType="textPassword"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/password2"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.49"
+                app:layout_constraintHorizontal_bias="0.492"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.76" />
+                app:layout_constraintTop_toBottomOf="@+id/username"
+                app:layout_constraintVertical_bias="0.321" />
 
             <EditText
                 android:id="@+id/password2"
                 android:layout_width="340dp"
                 android:layout_height="61dp"
+                android:layout_marginBottom="108dp"
                 android:background="@drawable/text_view"
                 android:ems="10"
                 android:hint="Re-Enter Password"
                 android:inputType="textPassword"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.49"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.849" />
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

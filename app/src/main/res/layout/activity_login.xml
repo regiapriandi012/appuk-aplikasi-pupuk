@@ -50,8 +50,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.492"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.887" />
+            app:layout_constraintTop_toBottomOf="@+id/password"
+            app:layout_constraintVertical_bias="0.366" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -69,6 +69,7 @@
             android:id="@+id/nama"
             android:layout_width="340dp"
             android:layout_height="61dp"
+            android:layout_marginTop="52dp"
             android:background="@drawable/text_view"
             android:ems="10"
             android:hint="Username"
@@ -76,12 +77,10 @@
             android:outlineAmbientShadowColor="#4CAD73"
             android:outlineSpotShadowColor="#4CAD73"
             android:shadowColor="#4CAD73"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.492"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.656" />
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <EditText
             android:id="@+id/password"
@@ -95,8 +94,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.492"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.753" />
+            app:layout_constraintTop_toBottomOf="@+id/nama"
+            app:layout_constraintVertical_bias="0.117" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

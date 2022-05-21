@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8F8F8"
-    tools:context=".ListData">
+    tools:context=".ListDataPupuk">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_mydata"
-        android:layout_width="417dp"
-        android:layout_height="572dp"
+        android:layout_width="392dp"
+        android:layout_height="569dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -31,11 +31,13 @@
         android:id="@+id/imageView3"
         android:layout_width="492dp"
         android:layout_height="203dp"
-        android:layout_marginTop="696dp"
+        android:layout_marginTop="712dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17000002"
         app:srcCompat="@drawable/logos" />
 
     <SearchView
@@ -95,7 +97,7 @@
         app:layout_constraintVertical_bias="0.098" />
 
     <Button
-        android:id="@+id/tommbol_artikel"
+        android:id="@+id/tombol_artikel"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="46dp"
         android:layout_height="46dp"
@@ -116,7 +118,7 @@
         android:layout_height="46dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="96dp"
-        android:drawableLeft="@drawable/ic_baseline_grass_24"
+        android:drawableLeft="@drawable/ic_baseline_grass_24_black"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.37"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#4CAD73"
     tools:context=".AkunActivity">
 
     <Button
@@ -20,57 +20,96 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.96" />
-
-    <Button
-        android:id="@+id/button_next"
-        android:layout_width="212dp"
-        android:layout_height="61dp"
-        android:backgroundTint="#4CAD73"
-        android:text="Next"
-        android:textColor="#FFFFFF"
-        app:cornerRadius="30px"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.87" />
-
-    <TextView
-        android:id="@+id/welcome_text_account"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:text="Welcome!"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.476" />
+        app:layout_constraintVertical_bias="0.954" />
 
     <TextView
         android:id="@+id/welcome_name_account"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
+        android:layout_width="320dp"
+        android:layout_height="43dp"
         android:text="TextView"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.552" />
+        app:layout_constraintVertical_bias="0.761" />
 
-    <ImageView
-        android:id="@+id/image_profile"
-        android:layout_width="279dp"
-        android:layout_height="259dp"
+    <TextView
+        android:id="@+id/email_akun"
+        android:layout_width="325dp"
+        android:layout_height="45dp"
+        android:text="email"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.823" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pupuk_card_view"
+        android:layout_width="308dp"
+        android:layout_height="291dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="645dp"
+        android:layout_height="426dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/pupuk_card_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.158"
-        app:srcCompat="@drawable/logos" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/logos_white" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="286dp"
+        android:layout_height="54dp"
+        android:text="APPUK ACCOUNT"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.796" />
+
+    <Button
+        android:id="@+id/tombol_kembali_akun"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="17dp"
+        android:backgroundTint="#FFFFFF"
+        android:drawableLeft="@drawable/ic_baseline_arrow_back_ios_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.016" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

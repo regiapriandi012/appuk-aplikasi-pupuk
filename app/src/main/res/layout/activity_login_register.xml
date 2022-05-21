@@ -37,15 +37,15 @@
         android:id="@+id/register_button"
         android:layout_width="340dp"
         android:layout_height="61dp"
+        android:layout_marginTop="48dp"
         android:backgroundTint="#4CAD73"
         android:text="Login"
         android:textColor="#FFFFFF"
         app:cornerRadius="20px"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.644" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
         android:id="@+id/button_register"
@@ -57,9 +57,10 @@
         app:cornerRadius="20px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.725" />
+        app:layout_constraintTop_toBottomOf="@+id/register_button"
+        app:layout_constraintVertical_bias="0.059" />
 
     <Button
         android:id="@+id/button_google"
@@ -71,9 +72,10 @@
         app:cornerRadius="20px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.853" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.135" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -94,7 +96,8 @@
         android:text="Or Login with Google"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.786" />
+        app:layout_constraintTop_toBottomOf="@+id/button_register"
+        app:layout_constraintVertical_bias="0.109" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,7 +12,7 @@
         android:background="#FFFFFF"
         tools:context=".AkunActivity"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="46dp">
+        tools:layout_editor_absoluteY="-84dp">
 
         <TextView
             android:id="@+id/textView4"
@@ -22,10 +22,10 @@
             android:textSize="34sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.275"
+            app:layout_constraintHorizontal_bias="0.369"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.499" />
+            app:layout_constraintVertical_bias="0.19" />
 
         <TextView
             android:id="@+id/welcome_text"
@@ -35,15 +35,16 @@
             android:textSize="34sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.275"
+            app:layout_constraintHorizontal_bias="0.369"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.551" />
+            app:layout_constraintVertical_bias="0.243" />
 
         <Button
             android:id="@+id/button_logout_welcome"
             android:layout_width="212dp"
             android:layout_height="61dp"
+            android:layout_marginBottom="52dp"
             android:backgroundTint="#FFFFFF"
             android:text="Logout"
             android:textColor="#4CAD73"
@@ -51,9 +52,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.956" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/button_next_welcome"
@@ -63,23 +62,35 @@
             android:text="Next"
             android:textColor="#FFFFFF"
             app:cornerRadius="30px"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/button_logout_welcome"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.854" />
+            app:layout_constraintVertical_bias="0.97" />
 
-        <ImageView
-            android:id="@+id/image_profile_welcome"
-            android:layout_width="258dp"
-            android:layout_height="234dp"
-            android:layout_marginStart="76dp"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/pupuk_card_view"
+            android:layout_width="308dp"
+            android:layout_height="291dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="100dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.167"
-            app:srcCompat="@drawable/logos" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/image_profile_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

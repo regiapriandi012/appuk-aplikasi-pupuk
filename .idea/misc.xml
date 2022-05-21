@@ -5,20 +5,32 @@
       <map>
         <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.184" />
         <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.184" />
+        <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/drawable/ic_baseline_home_24_black.xml" value="0.1005" />
         <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/drawable/ic_launcher_background.xml" value="0.184" />
         <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.184" />
         <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/drawable/logos.xml" value="0.184" />
         <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/drawable/logos_appuk.xml" value="0.184" />
+        <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/drawable/logos_white.xml" value="0.1005" />
+        <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/drawable/nama_produk_pupuk.xml" value="0.183" />
+        <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/drawable/silver_logos.xml" value="0.1005" />
         <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/drawable/text_view.xml" value="0.184" />
-        <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/layout/activity_akun.xml" value="0.1" />
+        <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.1" />
+        <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/layout-w936dp/content_scrolling.xml" value="0.1" />
+        <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/layout/activity_akun.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/layout/activity_detail_pupuk.xml" value="0.1" />
+        <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/layout/activity_home.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/layout/activity_list_data.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/layout/activity_list_data_pupuk.xml" value="0.1" />
         <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/layout/activity_login.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/layout/activity_login_google_actiivity.xml" value="0.14407866609662248" />
         <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/layout/activity_login_register.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/layout/activity_register.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/layout/activity_welcome.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/layout/activity_welcome.xml" value="0.1" />
+        <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/layout/content_scrolling.xml" value="0.1" />
+        <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/layout/detail_pupuk_activity.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/layout/item_list.xml" value="0.1" />
+        <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/layout/item_list_pupuk.xml" value="0.1" />
         <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/regia/AndroidStudioProjects/Appuk/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
       </map>

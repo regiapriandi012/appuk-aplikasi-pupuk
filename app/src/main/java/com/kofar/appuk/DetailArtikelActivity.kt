@@ -39,7 +39,12 @@ class DetailArtikelActivity : AppCompatActivity() {
             .apply(RequestOptions().override(700, 700))
             .into(findViewById(R.id.gambar_artikel_detail))
         findViewById<TextView>(R.id.judul_artikel_detail).text = dataArtikelDetail?.judul_artikel.toString()
+        findViewById<TextView>(R.id.tanggal_publish_artikel_detail).text = dataArtikelDetail?.tanggal_publish.toString()
         findViewById<TextView>(R.id.paragraf_satu).text = dataArtikelDetail?.paragraf_satu.toString()
+        findViewById<TextView>(R.id.paragraf_dua).text = dataArtikelDetail?.paragraf_dua.toString()
+        findViewById<TextView>(R.id.paragraf_tiga).text = dataArtikelDetail?.paragraf_tiga.toString()
+        findViewById<TextView>(R.id.paragraf_empat).text = dataArtikelDetail?.paragraf_empat.toString()
+        findViewById<TextView>(R.id.paragraf_lima).text = dataArtikelDetail?.paragraf_lima.toString()
 
         findViewById<Button>(R.id.tombol_kembali_artikel_detail).setOnClickListener {
             val intent = Intent(this, ListDataArtikel::class.java)

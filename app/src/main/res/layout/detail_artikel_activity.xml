@@ -50,40 +50,54 @@
 
     <ImageView
         android:id="@+id/gambar_artikel_detail"
-        android:layout_width="379dp"
-        android:layout_height="269dp"
+        android:layout_width="394dp"
+        android:layout_height="218dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.189"
+        app:layout_constraintVertical_bias="0.243"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/judul_artikel_detail"
-        android:layout_width="378dp"
-        android:layout_height="135dp"
+        android:layout_width="394dp"
+        android:layout_height="115dp"
         android:background="@drawable/nama_produk_pupuk"
         android:backgroundTint="#EEF1F4"
         android:text="TextView"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gambar_artikel_detail"
-        app:layout_constraintVertical_bias="0.046" />
+        app:layout_constraintVertical_bias="0.093" />
 
     <include
         android:id="@+id/include3"
         layout="@layout/content_scrolling"
-        android:layout_width="383dp"
-        android:layout_height="320dp"
+        android:layout_width="410dp"
+        android:layout_height="268dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/judul_artikel_detail"
-        app:layout_constraintVertical_bias="0.238" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tanggal_publish_artikel_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/judul_artikel_detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gambar_artikel_detail"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

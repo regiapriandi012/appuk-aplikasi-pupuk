@@ -16,6 +16,10 @@ class ListDataArtikel : AppCompatActivity() {
         val gambarArtikel = resources.getStringArray(R.array.foto_artikel)
         val tanggalPublishArtikel = resources.getStringArray(R.array.tanggal_artikel_dipublish)
         val paragrafSatu = resources.getStringArray(R.array.paragraf_satu)
+        val paragrafDua = resources.getStringArray(R.array.paragraf_dua)
+        val paragrafTiga = resources.getStringArray(R.array.paragraf_tiga)
+        val paragrafEmpat = resources.getStringArray(R.array.paragraf_empat)
+        val paragrafLima = resources.getStringArray(R.array.paragraf_lima)
         val listMyData = ArrayList<DataArtikel>()
         for (position in judulArtikel.indices) {
             val myData = DataArtikel(
@@ -23,6 +27,10 @@ class ListDataArtikel : AppCompatActivity() {
                 gambarArtikel[position],
                 tanggalPublishArtikel[position],
                 paragrafSatu[position],
+                paragrafDua[position],
+                paragrafTiga[position],
+                paragrafEmpat[position],
+                paragrafLima[position]
             )
             listMyData.add(myData)
         }

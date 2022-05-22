@@ -9,6 +9,10 @@ data class DataArtikel(
     var gambar_artikel: String?,
     var tanggal_publish: String?,
     var paragraf_satu: String?,
+    var paragraf_dua: String?,
+    var paragraf_tiga: String?,
+    var paragraf_empat: String?,
+    var paragraf_lima: String?
 
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
@@ -16,6 +20,10 @@ data class DataArtikel(
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString()
     ) {
     }
 
@@ -26,6 +34,10 @@ data class DataArtikel(
         parcel.writeString(gambar_artikel)
         parcel.writeString(tanggal_publish)
         parcel.writeString(paragraf_satu)
+        parcel.writeString(paragraf_dua)
+        parcel.writeString(paragraf_tiga)
+        parcel.writeString(paragraf_empat)
+        parcel.writeString(paragraf_lima)
     }
 
     override fun describeContents(): Int {

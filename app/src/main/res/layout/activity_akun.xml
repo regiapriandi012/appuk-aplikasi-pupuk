@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4CAD73"
+    android:background="@color/white"
     tools:context=".AkunActivity">
 
     <Button
         android:id="@+id/button_logout"
         android:layout_width="212dp"
         android:layout_height="61dp"
-        android:backgroundTint="#FFFFFF"
+        android:backgroundTint="#4CAD73"
         android:text="Logout"
-        android:textColor="#4CAD73"
+        android:textColor="@color/black"
         app:cornerRadius="20px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,13 +81,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/logos_white" />
+        app:srcCompat="@drawable/logos" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="286dp"
         android:layout_height="54dp"
         android:text="APPUK ACCOUNT"
+        android:textColor="#FFFFFF"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"

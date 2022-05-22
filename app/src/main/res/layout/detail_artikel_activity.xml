@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     android:background="#667080"
     android:backgroundTint="#667080"
-    tools:context=".DetailPupukActivity">
+    tools:context=".DetailArtikelActivity">
 
     <Button
-        android:id="@+id/tombol_kembali2"
+        android:id="@+id/tombol_kembali_artikel_detail"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="46dp"
         android:layout_height="46dp"
@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.02" />
 
     <Button
-        android:id="@+id/tombol_akun2"
+        android:id="@+id/tombol_akun_artikel_detail"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="46dp"
         android:layout_height="46dp"
@@ -36,7 +36,7 @@
         app:layout_constraintVertical_bias="0.02" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageView5"
         android:layout_width="734dp"
         android:layout_height="845dp"
         android:layout_marginTop="92dp"
@@ -48,85 +48,42 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/logos_white" />
 
-    <Button
-        android:id="@+id/register_button4"
-        android:layout_width="178dp"
-        android:layout_height="67dp"
-        android:backgroundTint="#393F48"
-        android:text="Beli"
-        android:textColor="#FFFFFF"
-        app:cornerRadius="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.819"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView7"
-        app:layout_constraintVertical_bias="0.492" />
-
     <ImageView
-        android:id="@+id/gambar_pupuk_detail"
-        android:layout_width="385dp"
-        android:layout_height="341dp"
+        android:id="@+id/gambar_artikel_detail"
+        android:layout_width="379dp"
+        android:layout_height="269dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.09"
+        app:layout_constraintVertical_bias="0.189"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="596dp"
-        android:layout_height="358dp"
-        android:layout_marginTop="712dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.17000002"
-        app:srcCompat="@drawable/silver_logos" />
-
     <TextView
-        android:id="@+id/harga_pupuk_detail"
-        android:layout_width="115dp"
-        android:layout_height="22dp"
-        android:text="TextView"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.197"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView7"
-        app:layout_constraintVertical_bias="0.497" />
-
-    <TextView
-        android:id="@+id/nama_pupuk_produk"
-        android:layout_width="360dp"
-        android:layout_height="55dp"
+        android:id="@+id/judul_artikel_detail"
+        android:layout_width="378dp"
+        android:layout_height="135dp"
         android:background="@drawable/nama_produk_pupuk"
         android:backgroundTint="#EEF1F4"
         android:text="TextView"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gambar_pupuk_detail"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/gambar_artikel_detail"
+        app:layout_constraintVertical_bias="0.046" />
 
     <include
-        android:id="@+id/include2"
-        layout="@layout/content_scrolling_pupuk"
-        android:layout_width="373dp"
-        android:layout_height="214dp"
+        android:id="@+id/include3"
+        layout="@layout/content_scrolling"
+        android:layout_width="383dp"
+        android:layout_height="320dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nama_pupuk_produk" />
+        app:layout_constraintTop_toBottomOf="@+id/judul_artikel_detail"
+        app:layout_constraintVertical_bias="0.238" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

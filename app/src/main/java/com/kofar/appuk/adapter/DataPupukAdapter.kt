@@ -37,7 +37,7 @@ class DataPupukAdapter(val listDataPupuks: ArrayList<DataPupuk>, val context: Co
 
         holder.pupukCard.setOnClickListener {
             val moveWithObjectIntent = Intent(context, DetailPupukActivity::class.java)
-            moveWithObjectIntent.putExtra(DetailPupukActivity.EXTRA_MYDATA, myData)
+            moveWithObjectIntent.putExtra(DetailPupukActivity.EXTRA_DATA_PUPUK, myData)
             context.startActivity(moveWithObjectIntent)
         }
     }

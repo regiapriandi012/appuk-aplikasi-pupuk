@@ -11,6 +11,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Appuk">
         <activity
+            android:name=".DetailArtikelActivity"
+            android:exported="false"
+            android:label="@string/title_activity_detail_artikel"
+            android:theme="@style/Theme.Appuk.NoActionBar" />
+        <activity
+            android:name=".ScrollingActivity"
+            android:exported="false"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/Theme.Appuk.NoActionBar" />
+        <activity
+            android:name=".ListDataArtikel"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity

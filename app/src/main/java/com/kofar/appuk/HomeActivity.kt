@@ -22,7 +22,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         findViewById<ImageView>(R.id.imageView12).setOnClickListener {
-            val intent = Intent(this, ListDataPupuk::class.java)
+            val intent = Intent(this, ListDataArtikel::class.java)
             startActivity(intent)
         }
 
@@ -42,7 +42,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.tombol_artikel_home).setOnClickListener {
-            val intent = Intent(this, ListDataPupuk::class.java)
+            val intent = Intent(this, ListDataArtikel::class.java)
             startActivity(intent)
         }
 

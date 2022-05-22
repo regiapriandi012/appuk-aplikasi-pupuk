@@ -12,9 +12,9 @@ class ListDataPupuk : AppCompatActivity() {
     private val list = ArrayList<DataPupuk>()
 
     private fun showRecyclerGrid() {
-        findViewById<RecyclerView>(R.id.rv_mydata).layoutManager = GridLayoutManager(this, 2)
+        findViewById<RecyclerView>(R.id.rv_data_pupuk).layoutManager = GridLayoutManager(this, 2)
         val dataPupukAdapter = DataPupukAdapter(list, this)
-        findViewById<RecyclerView>(R.id.rv_mydata).adapter = dataPupukAdapter
+        findViewById<RecyclerView>(R.id.rv_data_pupuk).adapter = dataPupukAdapter
     }
 
     fun getListMyDatas(): ArrayList<DataPupuk> {
@@ -29,7 +29,6 @@ class ListDataPupuk : AppCompatActivity() {
                 dataHargaPupuk[position],
                 dataGambarPupuk[position],
                 dataKeteranganPupuk[position]
-                //dataPhoto[position]
             )
             listDatumPupuks.add(dataPupuk)
         }
@@ -40,7 +39,7 @@ class ListDataPupuk : AppCompatActivity() {
         setContentView(R.layout.activity_list_data_pupuk)
         supportActionBar?.hide()
 
-        findViewById<RecyclerView>(R.id.rv_mydata).setHasFixedSize(true)
+        findViewById<RecyclerView>(R.id.rv_data_pupuk).setHasFixedSize(true)
         list.addAll(getListMyDatas())
         showRecyclerGrid()
 
@@ -60,7 +59,7 @@ class ListDataPupuk : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.tombol_artikel).setOnClickListener {
-            val intent = Intent(this, ListDataPupuk::class.java)
+            val intent = Intent(this, ListDataArtikel::class.java)
             startActivity(intent)
         }
 

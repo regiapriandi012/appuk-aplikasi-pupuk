@@ -12,8 +12,8 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.kofar.appuk.DataPupuk
 import com.kofar.appuk.DetailPupukActivity
+import com.kofar.appuk.data.DataPupuk
 
 
 class DataPupukAdapter(val listDataPupuks: ArrayList<DataPupuk>, val context: Context) :

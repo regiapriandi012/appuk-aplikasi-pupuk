@@ -8,18 +8,26 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
+import com.kofar.appuk.artikelhelper.REQUEST_ADD
+import com.kofar.appuk.data_theme.SettingModel
+import com.kofar.appuk.data_theme.SettingPreference
+import com.kofar.appuk.databinding.ActivityAkunBinding
 
 
 class AkunActivity : AppCompatActivity() {
 
     // declare the GoogleSignInClient
     lateinit var mGoogleSignInClient: GoogleSignInClient
+    private lateinit var binding: ActivityAkunBinding
+    private lateinit var settingModel: SettingModel
+    private lateinit var mSettingPreference: SettingPreference
 
     private val auth by lazy {
         FirebaseAuth.getInstance()
@@ -29,6 +37,23 @@ class AkunActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_akun)
         supportActionBar?.hide()
+
+        binding = ActivityAkunBinding.inflate(layoutInflater)
+        binding.act = this
+        setContentView(binding.root)
+        mSettingPreference = SettingPreference(this)
+        showExistingPreference()
+
+        findViewById<Button>(R.id.setting_theme).setOnClickListener {
+            val intent = Intent(this, SettingPreferenceActivity::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<Button>(R.id.admin).setOnClickListener {
+            val intent = Intent(this, ArtikelAddUpdateActivity::class.java)
+            startActivityForResult(intent, REQUEST_ADD)
+        }
+
 
         // call requestIdToken as follows
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -65,6 +90,42 @@ class AkunActivity : AppCompatActivity() {
             findViewById<TextView>(R.id.welcome_name_account).text = personName
             findViewById<TextView>(R.id.email_akun).text = personEmail
 
+        }
     }
-}
+
+    private fun showExistingPreference() {
+        settingModel = mSettingPreference.getSetting()
+        populateView(settingModel)
+    }
+    private fun populateView(settingModel: SettingModel) {
+        if (settingModel.isDarkTheme) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            delegate.applyDayNight()
+        }
+        else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            delegate.applyDayNight()
+        }
+        binding.settingModel = settingModel
+    }
+
+    companion object {
+        private const val REQUEST_CODE = 100
+    }
+
+    fun openSetting(){
+        val intent = Intent(this, SettingPreferenceActivity::class.java)
+        startActivityForResult(intent, REQUEST_CODE)
+    }
+
+    @Deprecated("Deprecated in Java")
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == REQUEST_CODE) {
+            if (resultCode == SettingPreferenceActivity.RESULT_CODE) {
+                showExistingPreference()
+            }
+        }
+    }
+
 }

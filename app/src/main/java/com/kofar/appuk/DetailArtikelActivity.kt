@@ -10,8 +10,11 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.kofar.appuk.data.DataArtikel
 
 class DetailArtikelActivity : AppCompatActivity() {
+
+    private var artikel: DataArtikel? = null
 
     companion object {
         const val EXTRA_DATA_ARTIKEL = "extra_data_artikel"
@@ -39,6 +42,7 @@ class DetailArtikelActivity : AppCompatActivity() {
             .apply(RequestOptions().override(700, 700))
             .into(findViewById(R.id.gambar_artikel_detail))
         findViewById<TextView>(R.id.judul_artikel_detail).text = dataArtikelDetail?.judul_artikel.toString()
+        findViewById<TextView>(R.id.penulis_artikel).text = "By " + dataArtikelDetail?.penulis_artikel.toString()
         findViewById<TextView>(R.id.tanggal_publish_artikel_detail).text = dataArtikelDetail?.tanggal_publish.toString()
         findViewById<TextView>(R.id.paragraf_satu).text = dataArtikelDetail?.paragraf_satu.toString()
         findViewById<TextView>(R.id.paragraf_dua).text = dataArtikelDetail?.paragraf_dua.toString()

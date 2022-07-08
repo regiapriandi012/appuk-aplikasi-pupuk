@@ -21,8 +21,13 @@ class HomeActivity : AppCompatActivity() {
 
         }
 
+        findViewById<Button>(R.id.tombol_artikel_home).setOnClickListener {
+            val intent = Intent(this@HomeActivity, ListDataArtikel::class.java)
+            startActivity(intent)
+        }
+
         findViewById<ImageView>(R.id.imageView12).setOnClickListener {
-            val intent = Intent(this, ListDataArtikel::class.java)
+            val intent = Intent(this@HomeActivity, ListDataArtikel::class.java)
             startActivity(intent)
         }
 
@@ -38,11 +43,6 @@ class HomeActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.tombol_akun_home).setOnClickListener {
             val intent = Intent(this, AkunActivity::class.java)
-            startActivity(intent)
-        }
-
-        findViewById<Button>(R.id.tombol_artikel_home).setOnClickListener {
-            val intent = Intent(this, ListDataArtikel::class.java)
             startActivity(intent)
         }
 

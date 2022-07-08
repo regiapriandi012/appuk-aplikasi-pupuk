@@ -58,6 +58,21 @@
                 android:ellipsize="end"
                 android:maxLines="2"
                 tools:text="dipublish tanggal" />
+
+            <Button
+                android:id="@+id/edit_artikel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#4CAD73"
+                android:text="Edit Artikel"
+                android:textColor="@color/white"
+                app:cornerRadius="20px"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.766"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.019" />
         </LinearLayout>
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

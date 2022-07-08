@@ -63,7 +63,7 @@
     <TextView
         android:id="@+id/judul_artikel_detail"
         android:layout_width="394dp"
-        android:layout_height="115dp"
+        android:layout_height="94dp"
         android:background="@drawable/nama_produk_pupuk"
         android:backgroundTint="#EEF1F4"
         android:text="TextView"
@@ -73,7 +73,7 @@
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gambar_artikel_detail"
-        app:layout_constraintVertical_bias="0.093" />
+        app:layout_constraintVertical_bias="0.18" />
 
     <include
         android:id="@+id/include3"
@@ -98,6 +98,19 @@
         app:layout_constraintHorizontal_bias="0.037"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gambar_artikel_detail"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.264" />
+
+    <TextView
+        android:id="@+id/penulis_artikel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/judul_artikel_detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gambar_artikel_detail"
+        app:layout_constraintVertical_bias="0.679" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

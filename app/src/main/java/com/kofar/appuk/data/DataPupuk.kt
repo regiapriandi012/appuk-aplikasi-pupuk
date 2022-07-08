@@ -1,4 +1,4 @@
-package com.kofar.appuk
+package com.kofar.appuk.data
 
 import android.os.Parcel
 import android.os.Parcelable

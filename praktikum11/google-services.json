@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "943734863778",
+    "project_id": "fir-ppb2021-cc6ff",
+    "storage_bucket": "fir-ppb2021-cc6ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943734863778:android:f58d59bb2359335824e4fb",
+        "android_client_info": {
+          "package_name": "com.regiapriandi_19102283.praktikum"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "943734863778-j66didj5fgk7vec9618mm3oqfqt6bfqr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLdn1eGOld3sCH9Q2e5m3gAPCqGVpNLX4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "943734863778-j66didj5fgk7vec9618mm3oqfqt6bfqr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

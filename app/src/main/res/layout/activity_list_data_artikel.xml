@@ -7,6 +7,15 @@
     android:background="#F8F8F8"
     tools:context=".ListDataArtikel">
 
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:visibility="invisible"
+        app:layout_anchor="@id/rv_data_artikel"
+        app:layout_anchorGravity="center"
+        tools:ignore="MissingConstraints" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_data_artikel"
         android:layout_width="410dp"

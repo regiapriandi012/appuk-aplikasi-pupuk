@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F8F8"
     tools:context=".HomeActivity">
 
 
@@ -153,8 +152,8 @@
 
     <ImageView
         android:id="@+id/imageView12"
-        android:layout_width="370dp"
-        android:layout_height="193dp"
+        android:layout_width="345dp"
+        android:layout_height="192dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
@@ -163,14 +162,14 @@
 
     <ImageView
         android:id="@+id/imageView13"
-        android:layout_width="252dp"
-        android:layout_height="270dp"
+        android:layout_width="234dp"
+        android:layout_height="251dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.051"
         app:srcCompat="@drawable/img_2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

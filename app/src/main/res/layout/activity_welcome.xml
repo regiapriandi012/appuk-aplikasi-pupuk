@@ -9,7 +9,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFFFFF"
         tools:context=".AkunActivity"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="-84dp">
@@ -71,11 +70,11 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/pupuk_card_view"
-            android:layout_width="308dp"
-            android:layout_height="291dp"
+            android:layout_width="268dp"
+            android:layout_height="227dp"
             android:clickable="true"
             android:focusable="true"
-            app:cardCornerRadius="100dp"
+            app:cardCornerRadius="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

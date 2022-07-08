@@ -8,6 +8,7 @@ import android.os.Parcelable
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.kofar.appuk.data.DataArtikel
@@ -32,6 +33,8 @@ class DetailArtikelActivity : AppCompatActivity() {
     @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        delegate.localNightMode = AppCompatDelegate.MODE_NIGHT_NO;
 
         setContentView(R.layout.detail_artikel_activity)
 

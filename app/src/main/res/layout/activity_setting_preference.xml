@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     tools:context=".SettingPreferenceActivity">
 
     <Button
@@ -19,13 +18,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.612" />
+        app:layout_constraintVertical_bias="0.672" />
 
     <TextView
         android:id="@+id/welcome_name_account"
         android:layout_width="320dp"
         android:layout_height="43dp"
-        android:text="Dark Theme"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,29 +75,30 @@
 
     <RadioGroup
         android:id="@+id/rg_love_mu"
-        android:layout_width="325dp"
-        android:layout_height="65dp"
-        android:orientation="horizontal"
+        android:layout_width="259dp"
+        android:layout_height="153dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.487"
         tools:ignore="MissingConstraints">
 
         <RadioButton
             android:id="@+id/rb_yes"
-            android:layout_width="163dp"
-            android:layout_height="65dp"
-            android:text="Yes"
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:text="Dark Theme"
             android:textAlignment="center"
             tools:layout_editor_absoluteX="88dp"
             tools:layout_editor_absoluteY="346dp" />
 
         <RadioButton
             android:id="@+id/rb_no"
-            android:layout_width="160dp"
-            android:layout_height="match_parent"
-            android:text="No"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:text="Light Theme"
             android:textAlignment="center"
             tools:layout_editor_absoluteX="201dp"
             tools:layout_editor_absoluteY="346dp" />

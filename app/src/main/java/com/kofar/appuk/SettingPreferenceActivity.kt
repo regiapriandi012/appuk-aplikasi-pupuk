@@ -18,10 +18,6 @@ class SettingPreferenceActivity : AppCompatActivity(), View.OnClickListener {
         const val RESULT_CODE = 101
     }
 
-    private fun isValidEmail(email: CharSequence): Boolean {
-        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
-    }
-
     private fun showPreferenceInForm() {
         //binding.edtName.setText(settingModel.name)
         //binding.edtEmail.setText(settingModel.email)
@@ -54,7 +50,6 @@ class SettingPreferenceActivity : AppCompatActivity(), View.OnClickListener {
         mSettingPreference = SettingPreference(this)
         settingModel = mSettingPreference.getSetting()
         showPreferenceInForm()
-        supportActionBar?.title = getString(R.string.setting_page)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
     }

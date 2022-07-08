@@ -39,7 +39,7 @@ class ArtikelAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
         //supportActionBar?.hide()
         supportActionBar?.title = ""
         val bar: ActionBar? = actionBar
-        bar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#4CAD73")))
+        bar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#FFFFFF")))
         binding = ActivityArtikelAddUpdateBinding.inflate(layoutInflater)
         setContentView(binding.root)
         artikelHelper = ArtikelHelper.getInstance(applicationContext)

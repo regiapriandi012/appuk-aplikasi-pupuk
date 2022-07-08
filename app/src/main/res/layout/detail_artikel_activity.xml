@@ -40,6 +40,8 @@
         android:layout_width="734dp"
         android:layout_height="845dp"
         android:layout_marginTop="92dp"
+        android:background="@null"
+        android:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
@@ -62,18 +64,18 @@
 
     <TextView
         android:id="@+id/judul_artikel_detail"
-        android:layout_width="394dp"
-        android:layout_height="94dp"
+        android:layout_width="372dp"
+        android:layout_height="91dp"
         android:background="@drawable/nama_produk_pupuk"
         android:backgroundTint="#EEF1F4"
         android:text="TextView"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gambar_artikel_detail"
-        app:layout_constraintVertical_bias="0.18" />
+        app:layout_constraintVertical_bias="0.178" />
 
     <include
         android:id="@+id/include3"

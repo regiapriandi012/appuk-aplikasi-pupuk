@@ -8,12 +8,13 @@ import android.os.Parcelable
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.kofar.appuk.AkunActivity
-import com.kofar.appuk.listdata.ListDataPupuk
 import com.kofar.appuk.R
 import com.kofar.appuk.data.DataPupuk
+import com.kofar.appuk.listdata.ListDataPupuk
 
 class DetailPupukActivity : AppCompatActivity() {
 
@@ -34,6 +35,8 @@ class DetailPupukActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.detail_pupuk_activity)
         val myData by getParcelableExtra<DataPupuk>(EXTRA_DATA_PUPUK)
+
+        delegate.localNightMode = AppCompatDelegate.MODE_NIGHT_NO;
 
         Glide.with(this)
             .load(myData?.gambar_pupuk.toString())

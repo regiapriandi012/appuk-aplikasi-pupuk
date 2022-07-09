@@ -1,7 +1,11 @@
 package com.kofar.appuk.addupdate
 
 import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -14,9 +18,12 @@ import com.kofar.appuk.R
 import com.kofar.appuk.data.DataPupuk
 import com.kofar.appuk.databinding.ActivityPupukAddUpdateBinding
 import com.kofar.appuk.helper.pupukhelper.ALERT_DIALOG_CLOSE
+import com.kofar.appuk.helper.pupukhelper.ALERT_DIALOG_DELETE
 import com.kofar.appuk.helper.pupukhelper.EXTRA_POSITION
 import com.kofar.appuk.helper.pupukhelper.EXTRA_PUPUK
 import com.kofar.appuk.helper.pupukhelper.RESULT_ADD
+import com.kofar.appuk.helper.pupukhelper.RESULT_DELETE
+import com.kofar.appuk.helper.pupukhelper.RESULT_UPDATE
 
 class PupukAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var auth: FirebaseAuth
@@ -76,6 +83,23 @@ class PupukAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
                 return
             }
             if (isEdit) {
+                val currentUser = auth.currentUser
+                val user = hashMapOf(
+                    "uid" to currentUser?.uid,
+                    "nama_produk" to nama_produk,
+                    "harga_produk" to harga_produk,
+                    "gambar_produk" to gambar_produk,
+                    "keterangan_produk" to keterangan_produk
+                )
+                firestore.collection("data_penjualan_produk_pupuk").document(pupuk?.id.toString())
+                    .set(user)
+                    .addOnSuccessListener {
+                        setResult(RESULT_UPDATE, intent)
+                        finish()
+                    }
+                    .addOnFailureListener { e ->
+                        Toast.makeText(this@PupukAddUpdateActivity, "Gagal mengupdate data", Toast.LENGTH_SHORT).show()
+                    }
 
             } else {
                 val currentUser = auth.currentUser
@@ -102,11 +126,9 @@ class PupukAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
-
-    /*
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         if (isEdit) {
-            menuInflater.inflate(R.menu.menu_form, menu)
+            menuInflater.inflate(R.menu.menu_form_pupuk, menu)
         }
         return super.onCreateOptionsMenu(menu)
         return true
@@ -118,7 +140,7 @@ class PupukAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
         }
         return super.onOptionsItemSelected(item)
         return true
-    }*/
+    }
 
     private fun showAlertDialog(type: Int) {
         val isDialogClose = type == ALERT_DIALOG_CLOSE
@@ -140,6 +162,19 @@ class PupukAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
                 if (isDialogClose) {
                     finish()
                 } else {
+                    firestore.collection("data_penjualan_produk_pupuk").document(pupuk?.id.toString())
+                        .delete()
+                        .addOnSuccessListener {
+                            Log.d("delete", "DocumentSnapshot successfully deleted!"+pupuk?.id.toString())
+                                val intent = Intent()
+                            intent.putExtra(EXTRA_POSITION, position)
+                            setResult(RESULT_DELETE, intent)
+                            finish()
+                        }
+                        .addOnFailureListener { e ->
+                            Log.w("a", "Error deleting document", e)
+                            Toast.makeText(this@PupukAddUpdateActivity, "Gagal menghapus data", Toast.LENGTH_SHORT).show()
+                        }
 
                 }
             }

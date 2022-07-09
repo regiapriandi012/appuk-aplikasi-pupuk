@@ -161,7 +161,7 @@ class ArtikelAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         if (isEdit) {
-            menuInflater.inflate(R.menu.menu_form, menu)
+            menuInflater.inflate(R.menu.menu_form_artikel, menu)
         }
         return super.onCreateOptionsMenu(menu)
     }

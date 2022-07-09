@@ -65,7 +65,7 @@
 
     <ImageView
         android:id="@+id/gambar_pupuk_detail"
-        android:layout_width="385dp"
+        android:layout_width="match_parent"
         android:layout_height="341dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,7 +104,7 @@
 
     <TextView
         android:id="@+id/nama_pupuk_produk"
-        android:layout_width="360dp"
+        android:layout_width="350dp"
         android:layout_height="55dp"
         android:background="@drawable/nama_produk_pupuk"
         android:backgroundTint="#EEF1F4"
@@ -120,7 +120,7 @@
     <include
         android:id="@+id/include2"
         layout="@layout/content_scrolling_pupuk"
-        android:layout_width="373dp"
+        android:layout_width="match_parent"
         android:layout_height="214dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"

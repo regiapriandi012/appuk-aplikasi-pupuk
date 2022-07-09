@@ -17,8 +17,38 @@
         android:orientation="vertical">
 
         <Button
+            android:id="@+id/my_blog"
+            android:layout_width="155dp"
+            android:layout_height="57dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="My Blog"
+            android:textColor="#4CAD73"
+            app:cornerRadius="20px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.092"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.707" />
+
+        <Button
+            android:id="@+id/my_pupuk"
+            android:layout_width="155dp"
+            android:layout_height="57dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="My Pupuk"
+            android:textColor="#4CAD73"
+            app:cornerRadius="20px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.881"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.708" />
+
+        <Button
             android:id="@+id/button_logout"
-            android:layout_width="240dp"
+            android:layout_width="215dp"
             android:layout_height="57dp"
             android:backgroundTint="#4CAD73"
             android:text="Logout"
@@ -26,7 +56,7 @@
             app:cornerRadius="20px"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.83"
+            app:layout_constraintHorizontal_bias="0.841"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.952" />
@@ -48,7 +78,7 @@
 
         <Button
             android:id="@+id/upload_blog"
-            android:layout_width="166dp"
+            android:layout_width="155dp"
             android:layout_height="57dp"
             android:backgroundTint="#4CAD73"
             android:text="Upload Blog"
@@ -56,14 +86,14 @@
             app:cornerRadius="20px"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.102"
+            app:layout_constraintHorizontal_bias="0.092"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.869" />
 
         <Button
             android:id="@+id/upload_produk"
-            android:layout_width="167dp"
+            android:layout_width="155dp"
             android:layout_height="57dp"
             android:backgroundTint="#4CAD73"
             android:text="Jual Pupuk"
@@ -71,47 +101,48 @@
             app:cornerRadius="20px"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.881"
+            app:layout_constraintHorizontal_bias="0.878"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.869" />
 
         <TextView
-        android:id="@+id/welcome_name_account"
-        android:layout_width="320dp"
-        android:layout_height="43dp"
-        android:text="TextView"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.439"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.691" />
+            android:id="@+id/welcome_name_account"
+            android:layout_width="320dp"
+            android:layout_height="43dp"
+            android:text="TextView"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.472"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.564" />
 
-    <TextView
-        android:id="@+id/email_akun"
-        android:layout_width="325dp"
-        android:layout_height="45dp"
-        android:text="email"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.76" />
+        <TextView
+            android:id="@+id/email_akun"
+            android:layout_width="325dp"
+            android:layout_height="45dp"
+            android:text="email"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.615" />
 
         <androidx.cardview.widget.CardView
-        android:id="@+id/pupuk_card_view"
-        android:layout_width="242dp"
-        android:layout_height="212dp"
-        android:clickable="true"
-        android:focusable="true"
-        app:cardCornerRadius="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+            android:id="@+id/pupuk_card_view"
+            android:layout_width="242dp"
+            android:layout_height="212dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView5"
+            app:layout_constraintVertical_bias="0.52">
 
             <ImageView
                 android:id="@+id/image_profile"
@@ -122,14 +153,14 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
         <ImageView
             android:id="@+id/imageView5"
             android:layout_width="645dp"
             android:layout_height="426dp"
-            android:layout_marginBottom="80dp"
-            app:layout_constraintBottom_toTopOf="@+id/pupuk_card_view"
+            android:layout_marginBottom="656dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -143,14 +174,14 @@
             android:text="APPUK ACCOUNT"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="34sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imageView5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.8" />
+            app:layout_constraintVertical_bias="0.873" />
 
         <Button
         android:id="@+id/tombol_kembali_akun"

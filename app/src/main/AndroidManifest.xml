@@ -11,6 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Appuk">
         <activity
+            android:name=".listdataedited.ListDataPupukEditedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".listdataedited.ListDataArtikelEditedActivity"
+            android:exported="false" />
+        <activity
             android:name=".addupdate.PupukAddUpdateActivity"
             android:exported="false" />
         <activity

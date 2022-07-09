@@ -22,23 +22,23 @@
 
         <TextView
             android:id="@+id/textView9"
-            android:layout_width="277dp"
-            android:layout_height="96dp"
+            android:layout_width="290dp"
+            android:layout_height="38dp"
             android:text="Jual Produk Pupuk"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="34sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imageView5"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.796" />
+            app:layout_constraintVertical_bias="0.824" />
 
         <Button
             android:id="@+id/btn_submit"
-            android:layout_width="349dp"
+            android:layout_width="350dp"
             android:layout_height="56dp"
             android:backgroundTint="#4CAD73"
             android:backgroundTintMode="add"
@@ -48,11 +48,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.955" />
+            app:layout_constraintVertical_bias="0.92" />
 
         <ScrollView
             android:id="@+id/scrollView2"
-            android:layout_width="391dp"
+            android:layout_width="match_parent"
             android:layout_height="507dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -77,9 +77,16 @@
                         android:id="@+id/edt_nama_produk_pupuk"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/text_view"
+                        android:ems="10"
                         android:hint="Nama Produk"
-                        android:inputType="textCapSentences"
-                        android:maxLines="1" />
+                        android:inputType="textPersonName"
+                        android:outlineAmbientShadowColor="#4CAD73"
+                        android:outlineSpotShadowColor="#4CAD73"
+                        android:shadowColor="#4CAD73"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.492"
+                        app:layout_constraintStart_toStartOf="parent" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -91,9 +98,16 @@
                         android:id="@+id/edt_harga_produk_pupuk"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/text_view"
+                        android:ems="10"
                         android:hint="Harga Produk (contoh 800000)"
-                        android:inputType="textCapSentences"
-                        android:maxLines="1" />
+                        android:inputType="textPersonName"
+                        android:outlineAmbientShadowColor="#4CAD73"
+                        android:outlineSpotShadowColor="#4CAD73"
+                        android:shadowColor="#4CAD73"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.492"
+                        app:layout_constraintStart_toStartOf="parent" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -104,10 +118,17 @@
                     <EditText
                         android:id="@+id/edt_gambar_produk_pupuk"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_view"
+                        android:ems="10"
                         android:hint="Link Gambar Produk"
-                        android:inputType="textCapSentences"
-                        android:maxLines="1" />
+                        android:inputType="textPersonName"
+                        android:outlineAmbientShadowColor="#4CAD73"
+                        android:outlineSpotShadowColor="#4CAD73"
+                        android:shadowColor="#4CAD73"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.492"
+                        app:layout_constraintStart_toStartOf="parent" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -118,10 +139,17 @@
                     <EditText
                         android:id="@+id/edt_keterangan_produk_pupuk"
                         android:layout_width="match_parent"
-                        android:layout_height="112dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/text_view"
+                        android:ems="10"
                         android:hint="Keterangan Produk"
-                        android:inputType="textCapSentences"
-                        android:maxLines="1" />
+                        android:inputType="textMultiLine"
+                        android:outlineAmbientShadowColor="#4CAD73"
+                        android:outlineSpotShadowColor="#4CAD73"
+                        android:shadowColor="#4CAD73"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.492"
+                        app:layout_constraintStart_toStartOf="parent" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 

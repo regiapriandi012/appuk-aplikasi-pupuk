@@ -1,4 +1,4 @@
-package com.kofar.appuk.listdata
+package com.kofar.appuk.listdataedited
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -15,11 +15,10 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.kofar.appuk.AkunActivity
-import com.kofar.appuk.HomeActivity
 import com.kofar.appuk.R
-import com.kofar.appuk.adapter.DataPupukAdapter
+import com.kofar.appuk.adapteredited.DataPupukAdapterEdited
 import com.kofar.appuk.data.DataPupuk
-import com.kofar.appuk.databinding.ActivityListDataPupukBinding
+import com.kofar.appuk.databinding.ActivityListDataPupukEditedBinding
 import com.kofar.appuk.helper.pupukhelper.REQUEST_ADD
 import com.kofar.appuk.helper.pupukhelper.REQUEST_UPDATE
 import com.kofar.appuk.helper.pupukhelper.RESULT_ADD
@@ -30,9 +29,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
-class ListDataPupuk : AppCompatActivity() {
-    private lateinit var adapter: DataPupukAdapter
-    private lateinit var binding: ActivityListDataPupukBinding
+class ListDataPupukEditedActivity : AppCompatActivity() {
+    private lateinit var adapter: DataPupukAdapterEdited
+    private lateinit var binding: ActivityListDataPupukEditedBinding
     private val listPupuk = ArrayList<DataPupuk>()
     private lateinit var auth: FirebaseAuth
     private lateinit var firestore: FirebaseFirestore
@@ -40,43 +39,18 @@ class ListDataPupuk : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
-        binding = ActivityListDataPupukBinding.inflate(layoutInflater)
+        binding = ActivityListDataPupukEditedBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.title = ""
         firestore = Firebase.firestore
         auth = Firebase.auth
         binding.rvDataPupuk.layoutManager = GridLayoutManager(this, 2)
         binding.rvDataPupuk.setHasFixedSize(true)
-        adapter = DataPupukAdapter(listPupuk, this)
+        adapter = DataPupukAdapterEdited(listPupuk, this, this)
         loadQuotes()
 
-        findViewById<Button>(R.id.tombol_belanja_pupuk).setOnClickListener {
-            val intent = Intent(this, ListDataPupuk::class.java)
-            startActivity(intent)
-        }
-
-        findViewById<Button>(R.id.tombol_akun).setOnClickListener {
+        findViewById<Button>(R.id.tombol_kembali_pupuk).setOnClickListener {
             val intent = Intent(this, AkunActivity::class.java)
-            startActivity(intent)
-        }
-
-        findViewById<Button>(R.id.tombol_kembali).setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
-        }
-
-        findViewById<Button>(R.id.tombol_artikel).setOnClickListener {
-            val intent = Intent(this, ListDataArtikel::class.java)
-            startActivity(intent)
-        }
-
-        findViewById<Button>(R.id.tombol_keranjang_belanja).setOnClickListener {
-            val intent = Intent(this, ListDataPupuk::class.java)
-            startActivity(intent)
-        }
-
-        findViewById<Button>(R.id.tombol_home).setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
     }
@@ -117,7 +91,7 @@ class ListDataPupuk : AppCompatActivity() {
                 .addOnFailureListener { exception ->
                     progressbar.visibility = View.INVISIBLE
                     Toast.makeText(
-                        this@ListDataPupuk, "Error adding document",Toast.LENGTH_SHORT
+                        this@ListDataPupukEditedActivity, "Error adding document",Toast.LENGTH_SHORT
                     ).show()
                 }
 

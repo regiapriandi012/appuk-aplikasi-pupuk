@@ -1,4 +1,4 @@
-package com.kofar.appuk.listdata
+package com.kofar.appuk.listdataedited
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,11 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import com.kofar.appuk.AkunActivity
-import com.kofar.appuk.HomeActivity
 import com.kofar.appuk.R
-import com.kofar.appuk.adapter.DataArtikelAdapter
+import com.kofar.appuk.adapteredited.DataArtikelAdapterEdited
 import com.kofar.appuk.data.DataArtikel
-import com.kofar.appuk.databinding.ActivityListDataArtikelBinding
+import com.kofar.appuk.databinding.ActivityListDataArtikelEditedBinding
 import com.kofar.appuk.db.ArtikelHelper
 import com.kofar.appuk.helper.artikelhelper.EXTRA_ARTIKEL
 import com.kofar.appuk.helper.artikelhelper.EXTRA_POSITION
@@ -27,11 +26,11 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
-class ListDataArtikel : AppCompatActivity() {
+class ListDataArtikelEditedActivity : AppCompatActivity() {
     private lateinit var artikelHelper: ArtikelHelper
-    private lateinit var artikelAdapter: DataArtikelAdapter
+    private lateinit var artikelAdapter: DataArtikelAdapterEdited
     private val EXTRA_STATE = "EXTRA_STATE"
-    private lateinit var binding: ActivityListDataArtikelBinding
+    private lateinit var binding: ActivityListDataArtikelEditedBinding
 
     private val listArtikel = ArrayList<DataArtikel>()
 
@@ -69,12 +68,12 @@ class ListDataArtikel : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_data_artikel)
         supportActionBar?.hide()
-        binding = ActivityListDataArtikelBinding.inflate(layoutInflater)
+        binding = ActivityListDataArtikelEditedBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.rvDataArtikel.layoutManager = LinearLayoutManager(this)
         binding.rvDataArtikel.setHasFixedSize(true)
-        artikelAdapter = DataArtikelAdapter(listArtikel, this)
+        artikelAdapter = DataArtikelAdapterEdited(listArtikel, this)
 
         binding.rvDataArtikel.adapter = artikelAdapter
         artikelHelper = ArtikelHelper.getInstance(applicationContext)
@@ -89,33 +88,8 @@ class ListDataArtikel : AppCompatActivity() {
             }
         }
 
-        findViewById<Button>(R.id.tombol_belanja_pupuk_artikel).setOnClickListener {
-            val intent = Intent(this, ListDataPupuk::class.java)
-            startActivity(intent)
-        }
-
-        findViewById<Button>(R.id.tombol_akun_artikel).setOnClickListener {
-            val intent = Intent(this, AkunActivity::class.java)
-            startActivity(intent)
-        }
-
         findViewById<Button>(R.id.tombol_kembali_artikel).setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
-        }
-
-        findViewById<Button>(R.id.tombol_artikel_artikel).setOnClickListener {
-            val intent = Intent(this, ListDataArtikel::class.java)
-            startActivity(intent)
-        }
-
-        findViewById<Button>(R.id.tombol_keranjang_belanja_artikel).setOnClickListener {
-            val intent = Intent(this, ListDataPupuk::class.java)
-            startActivity(intent)
-        }
-
-        findViewById<Button>(R.id.tombol_home_artikel).setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
+            val intent = Intent(this, AkunActivity::class.java)
             startActivity(intent)
         }
     }

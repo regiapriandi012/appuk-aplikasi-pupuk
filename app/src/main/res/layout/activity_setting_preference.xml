@@ -8,7 +8,7 @@
 
     <Button
         android:id="@+id/save_theme_button"
-        android:layout_width="235dp"
+        android:layout_width="match_parent"
         android:layout_height="67dp"
         android:backgroundTint="#4CAD73"
         android:text="Save"
@@ -75,7 +75,7 @@
 
     <RadioGroup
         android:id="@+id/rg_love_mu"
-        android:layout_width="259dp"
+        android:layout_width="350dp"
         android:layout_height="153dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -87,7 +87,7 @@
 
         <RadioButton
             android:id="@+id/rb_yes"
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="82dp"
             android:text="Dark Theme"
             android:textAlignment="center"
@@ -96,7 +96,7 @@
 
         <RadioButton
             android:id="@+id/rb_no"
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="68dp"
             android:text="Light Theme"
             android:textAlignment="center"

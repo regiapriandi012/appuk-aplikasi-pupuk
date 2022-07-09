@@ -23,12 +23,11 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_data_artikel"
-        android:layout_width="410dp"
+        android:layout_width="match_parent"
         android:layout_height="559dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:padding="20dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +55,7 @@
 
     <SearchView
         android:id="@+id/searchView"
-        android:layout_width="355dp"
+        android:layout_width="match_parent"
         android:layout_height="38dp"
         android:background="#9C9C9C"
         android:backgroundTint="#9C9C9C"

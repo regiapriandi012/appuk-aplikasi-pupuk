@@ -152,8 +152,9 @@
 
     <ImageView
         android:id="@+id/imageView12"
-        android:layout_width="345dp"
+        android:layout_width="match_parent"
         android:layout_height="192dp"
+        android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
@@ -162,8 +163,9 @@
 
     <ImageView
         android:id="@+id/imageView13"
-        android:layout_width="234dp"
+        android:layout_width="match_parent"
         android:layout_height="251dp"
+        android:paddingRight="120dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.09"

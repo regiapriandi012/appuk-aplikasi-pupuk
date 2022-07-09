@@ -16,6 +16,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.kofar.appuk.addupdate.ArtikelAddUpdateActivity
 import com.kofar.appuk.addupdate.PupukAddUpdateActivity
+import com.kofar.appuk.listdataedited.ListDataArtikelEditedActivity
+import com.kofar.appuk.listdataedited.ListDataPupukEditedActivity
 
 
 class AkunActivity : AppCompatActivity() {
@@ -45,6 +47,16 @@ class AkunActivity : AppCompatActivity() {
         findViewById<Button>(R.id.upload_produk).setOnClickListener {
             val intent = Intent(this, PupukAddUpdateActivity::class.java)
             startActivityForResult(intent, com.kofar.appuk.helper.pupukhelper.REQUEST_ADD)
+        }
+
+        findViewById<Button>(R.id.my_blog).setOnClickListener {
+            val intent = Intent(this, ListDataArtikelEditedActivity::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<Button>(R.id.my_pupuk).setOnClickListener {
+            val intent = Intent(this, ListDataPupukEditedActivity::class.java)
+            startActivity(intent)
         }
 
 

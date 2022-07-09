@@ -34,7 +34,7 @@
 
             <Button
                 android:id="@+id/register_button"
-                android:layout_width="340dp"
+                android:layout_width="350dp"
                 android:layout_height="61dp"
                 android:backgroundTint="#4CAD73"
                 android:text="Register"
@@ -73,7 +73,7 @@
 
             <EditText
                 android:id="@+id/nama"
-                android:layout_width="340dp"
+                android:layout_width="350dp"
                 android:layout_height="61dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="20dp"
@@ -92,7 +92,7 @@
 
             <EditText
                 android:id="@+id/username"
-                android:layout_width="340dp"
+                android:layout_width="350dp"
                 android:layout_height="61dp"
                 android:layout_marginTop="12dp"
                 android:background="@drawable/text_view"
@@ -109,7 +109,7 @@
 
             <EditText
                 android:id="@+id/password1"
-                android:layout_width="340dp"
+                android:layout_width="350dp"
                 android:layout_height="61dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/text_view"
@@ -125,7 +125,7 @@
 
             <EditText
                 android:id="@+id/password2"
-                android:layout_width="340dp"
+                android:layout_width="350dp"
                 android:layout_height="61dp"
                 android:layout_marginBottom="108dp"
                 android:background="@drawable/text_view"

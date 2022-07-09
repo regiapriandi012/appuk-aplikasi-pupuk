@@ -44,4 +44,18 @@
         android:layout_above="@+id/harga_pupuk"
         android:maxLines="2"
         android:paddingBottom="10dp"/>
+    <Button
+        android:id="@+id/edit_pupuk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#4CAD73"
+        android:text="Edit Pupuk"
+        android:textColor="@color/white"
+        app:cornerRadius="20px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.766"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.019" />
 </LinearLayout>

@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "298120390768-l87aj5449hhva2l83li80jrasqkk9qml.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kofar.appuk",
+            "certificate_hash": "3a6184666db9e6459197b446db2aa53930707390"
+          }
+        },
+        {
           "client_id": "298120390768-ol7e8b5cqft5cjv1unbee4f2icik3fem.apps.googleusercontent.com",
           "client_type": 3
         }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListDataArtikel">
+    tools:context=".listdata.ListDataArtikel">
 
     <ProgressBar
         android:id="@+id/progressbar"
@@ -13,6 +13,12 @@
         android:visibility="invisible"
         app:layout_anchor="@id/rv_data_artikel"
         app:layout_anchorGravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.379"
         tools:ignore="MissingConstraints" />
 
     <androidx.recyclerview.widget.RecyclerView

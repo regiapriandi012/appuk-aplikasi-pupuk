@@ -47,7 +47,7 @@
             app:layout_constraintVertical_bias="0.952" />
 
         <Button
-            android:id="@+id/admin"
+            android:id="@+id/upload_blog"
             android:layout_width="166dp"
             android:layout_height="57dp"
             android:backgroundTint="#4CAD73"
@@ -62,7 +62,7 @@
             app:layout_constraintVertical_bias="0.869" />
 
         <Button
-            android:id="@+id/admin2"
+            android:id="@+id/upload_produk"
             android:layout_width="167dp"
             android:layout_height="57dp"
             android:backgroundTint="#4CAD73"

@@ -1,4 +1,4 @@
-package com.kofar.appuk
+package com.kofar.appuk.detaildata
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -11,6 +11,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.kofar.appuk.AkunActivity
+import com.kofar.appuk.listdata.ListDataArtikel
+import com.kofar.appuk.R
 import com.kofar.appuk.data.DataArtikel
 
 class DetailArtikelActivity : AppCompatActivity() {

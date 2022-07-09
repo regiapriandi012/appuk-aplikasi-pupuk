@@ -12,11 +12,11 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.kofar.appuk.DetailPupukActivity
+import com.kofar.appuk.detaildata.DetailPupukActivity
 import com.kofar.appuk.data.DataPupuk
 
 
-class DataPupukAdapter(val listDataPupuks: ArrayList<DataPupuk>, val context: Context) :
+class DataPupukAdapter(var listDataPupuks: ArrayList<DataPupuk>, val context: Context) :
     RecyclerView.Adapter<DataPupukAdapter.GridViewHolder>() {
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): GridViewHolder {
         val view: View = LayoutInflater.from(viewGroup.context).inflate(com.kofar.appuk.R.layout.item_list_pupuk, viewGroup, false)

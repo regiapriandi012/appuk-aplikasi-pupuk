@@ -1,4 +1,4 @@
-package com.kofar.appuk
+package com.kofar.appuk.helper
 
 import android.database.Cursor
 import android.icu.text.SimpleDateFormat

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#667080"
     android:backgroundTint="#667080"
-    tools:context=".DetailArtikelActivity">
+    tools:context=".detaildata.DetailArtikelActivity">
 
     <Button
         android:id="@+id/tombol_kembali_artikel_detail"

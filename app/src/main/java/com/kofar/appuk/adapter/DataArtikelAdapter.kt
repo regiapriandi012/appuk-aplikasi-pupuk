@@ -13,12 +13,12 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.kofar.appuk.ArtikelAddUpdateActivity
-import com.kofar.appuk.DetailArtikelActivity
+import com.kofar.appuk.addupdate.ArtikelAddUpdateActivity
+import com.kofar.appuk.detaildata.DetailArtikelActivity
 import com.kofar.appuk.R
-import com.kofar.appuk.artikelhelper
-import com.kofar.appuk.artikelhelper.EXTRA_ARTIKEL
-import com.kofar.appuk.artikelhelper.EXTRA_POSITION
+import com.kofar.appuk.helper.artikelhelper
+import com.kofar.appuk.helper.artikelhelper.EXTRA_ARTIKEL
+import com.kofar.appuk.helper.artikelhelper.EXTRA_POSITION
 import com.kofar.appuk.data.DataArtikel
 
 class DataArtikelAdapter(var listMyData: ArrayList<DataArtikel>, private val activity: Activity) :

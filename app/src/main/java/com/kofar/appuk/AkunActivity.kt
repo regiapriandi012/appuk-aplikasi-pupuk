@@ -8,17 +8,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
-import com.kofar.appuk.artikelhelper.REQUEST_ADD
-import com.kofar.appuk.data_theme.SettingModel
-import com.kofar.appuk.data_theme.SettingPreference
-import com.kofar.appuk.databinding.ActivityAkunBinding
+import com.kofar.appuk.addupdate.ArtikelAddUpdateActivity
+import com.kofar.appuk.addupdate.PupukAddUpdateActivity
 
 
 class AkunActivity : AppCompatActivity() {
@@ -40,9 +37,14 @@ class AkunActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        findViewById<Button>(R.id.admin).setOnClickListener {
+        findViewById<Button>(R.id.upload_blog).setOnClickListener {
             val intent = Intent(this, ArtikelAddUpdateActivity::class.java)
-            startActivityForResult(intent, REQUEST_ADD)
+            startActivityForResult(intent, com.kofar.appuk.helper.artikelhelper.REQUEST_ADD)
+        }
+
+        findViewById<Button>(R.id.upload_produk).setOnClickListener {
+            val intent = Intent(this, PupukAddUpdateActivity::class.java)
+            startActivityForResult(intent, com.kofar.appuk.helper.pupukhelper.REQUEST_ADD)
         }
 
 

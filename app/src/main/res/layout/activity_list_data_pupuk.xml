@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListDataPupuk">
+    tools:context=".listdata.ListDataPupuk">
 
     <ProgressBar
         android:id="@+id/progressbar"
@@ -13,12 +13,18 @@
         android:visibility="invisible"
         app:layout_anchor="@id/rv_data_pupuk"
         app:layout_anchorGravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.386"
         tools:ignore="MissingConstraints" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_data_pupuk"
         android:layout_width="392dp"
-        android:layout_height="569dp"
+        android:layout_height="557dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -52,8 +58,8 @@
         android:id="@+id/searchView"
         android:layout_width="355dp"
         android:layout_height="38dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="#FFFFFF"
+        android:background="#9C9C9C"
+        android:backgroundTint="#9C9C9C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

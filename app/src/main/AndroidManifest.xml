@@ -11,29 +11,32 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Appuk">
         <activity
-            android:name=".ArtikelAddUpdateActivity"
+            android:name=".addupdate.PupukAddUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".addupdate.ArtikelAddUpdateActivity"
             android:exported="false" />
         <activity
             android:name=".SettingPreferenceActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailArtikelActivity"
+            android:name=".detaildata.DetailArtikelActivity"
             android:exported="false"
             android:label="@string/title_activity_detail_artikel"
             android:theme="@style/Theme.Appuk.NoActionBar" />
         <activity
-            android:name=".ListDataArtikel"
+            android:name=".listdata.ListDataArtikel"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailPupukActivity"
+            android:name=".detaildata.DetailPupukActivity"
             android:exported="false"
             android:label="@string/title_activity_detail_pupuk"
             android:theme="@style/Theme.Appuk.NoActionBar" />
         <activity
-            android:name=".ListDataPupuk"
+            android:name=".listdata.ListDataPupuk"
             android:exported="false" />
         <activity
             android:name=".WelcomeActivity"

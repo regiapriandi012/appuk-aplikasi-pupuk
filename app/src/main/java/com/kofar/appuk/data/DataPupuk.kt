@@ -1,44 +1,16 @@
 package com.kofar.appuk.data
 
-import android.os.Parcel
 import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 
-@DataPupuk.Parcelize
+@Parcelize
 data class DataPupuk(
-    var nama_pupuk: String?,
-    var harga_pupuk: String?,
-    var gambar_pupuk: String?,
-    var keterangan_pupuk: String?
+    var id: String? = null,
+    var nama_pupuk: String? = null,
+    var harga_pupuk: String? = null,
+    var gambar_pupuk: String? = null,
+    var keterangan_pupuk: String? = null
 
 ) : Parcelable {
-    constructor(parcel: Parcel) : this(
-        parcel.readString(),
-        parcel.readString(),
-        parcel.readString(),
-        parcel.readString()
-    ) {
-    }
 
-    annotation class Parcelize
-
-    override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeString(nama_pupuk)
-        parcel.writeString(harga_pupuk)
-        parcel.writeString(gambar_pupuk)
-        parcel.writeString(keterangan_pupuk)
-    }
-
-    override fun describeContents(): Int {
-        return 0
-    }
-
-    companion object CREATOR : Parcelable.Creator<DataPupuk> {
-        override fun createFromParcel(parcel: Parcel): DataPupuk {
-            return DataPupuk(parcel)
-        }
-
-        override fun newArray(size: Int): Array<DataPupuk?> {
-            return arrayOfNulls(size)
-        }
-    }
 }

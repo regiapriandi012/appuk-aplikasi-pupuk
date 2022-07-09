@@ -1,4 +1,4 @@
-package com.kofar.appuk
+package com.kofar.appuk.addupdate
 
 import android.app.ActionBar
 import android.content.ContentValues
@@ -13,19 +13,20 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.kofar.appuk.artikelhelper.ALERT_DIALOG_CLOSE
-import com.kofar.appuk.artikelhelper.ALERT_DIALOG_DELETE
-import com.kofar.appuk.artikelhelper.EXTRA_ARTIKEL
-import com.kofar.appuk.artikelhelper.EXTRA_POSITION
-import com.kofar.appuk.artikelhelper.RESULT_ADD
-import com.kofar.appuk.artikelhelper.RESULT_DELETE
-import com.kofar.appuk.artikelhelper.RESULT_UPDATE
-import com.kofar.appuk.artikelhelper.getCurrentDate
+import com.kofar.appuk.R
 import com.kofar.appuk.data.DataArtikel
 import com.kofar.appuk.databinding.ActivityArtikelAddUpdateBinding
 import com.kofar.appuk.db.ArtikelHelper
 import com.kofar.appuk.db.DatabaseArtikelContract
 import com.kofar.appuk.db.DatabaseArtikelContract.QuoteColumns.Companion.tanggal_publish
+import com.kofar.appuk.helper.artikelhelper.ALERT_DIALOG_CLOSE
+import com.kofar.appuk.helper.artikelhelper.ALERT_DIALOG_DELETE
+import com.kofar.appuk.helper.artikelhelper.EXTRA_ARTIKEL
+import com.kofar.appuk.helper.artikelhelper.EXTRA_POSITION
+import com.kofar.appuk.helper.artikelhelper.RESULT_ADD
+import com.kofar.appuk.helper.artikelhelper.RESULT_DELETE
+import com.kofar.appuk.helper.artikelhelper.RESULT_UPDATE
+import com.kofar.appuk.helper.artikelhelper.getCurrentDate
 
 
 class ArtikelAddUpdateActivity : AppCompatActivity(), View.OnClickListener {

@@ -1,4 +1,4 @@
-package com.kofar.appuk
+package com.kofar.appuk.listdata
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,18 +7,21 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
+import com.kofar.appuk.AkunActivity
+import com.kofar.appuk.HomeActivity
+import com.kofar.appuk.R
 import com.kofar.appuk.adapter.DataArtikelAdapter
-import com.kofar.appuk.artikelhelper.EXTRA_ARTIKEL
-import com.kofar.appuk.artikelhelper.EXTRA_POSITION
-import com.kofar.appuk.artikelhelper.REQUEST_ADD
-import com.kofar.appuk.artikelhelper.REQUEST_UPDATE
-import com.kofar.appuk.artikelhelper.RESULT_ADD
-import com.kofar.appuk.artikelhelper.RESULT_DELETE
-import com.kofar.appuk.artikelhelper.RESULT_UPDATE
-import com.kofar.appuk.artikelhelper.mapCursorToArrayList
 import com.kofar.appuk.data.DataArtikel
 import com.kofar.appuk.databinding.ActivityListDataArtikelBinding
 import com.kofar.appuk.db.ArtikelHelper
+import com.kofar.appuk.helper.artikelhelper.EXTRA_ARTIKEL
+import com.kofar.appuk.helper.artikelhelper.EXTRA_POSITION
+import com.kofar.appuk.helper.artikelhelper.REQUEST_ADD
+import com.kofar.appuk.helper.artikelhelper.REQUEST_UPDATE
+import com.kofar.appuk.helper.artikelhelper.RESULT_ADD
+import com.kofar.appuk.helper.artikelhelper.RESULT_DELETE
+import com.kofar.appuk.helper.artikelhelper.RESULT_UPDATE
+import com.kofar.appuk.helper.artikelhelper.mapCursorToArrayList
 import kotlinx.android.synthetic.main.activity_list_data_artikel.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope

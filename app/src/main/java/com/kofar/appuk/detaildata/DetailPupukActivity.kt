@@ -1,4 +1,4 @@
-package com.kofar.appuk
+package com.kofar.appuk.detaildata
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -10,6 +10,9 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.kofar.appuk.AkunActivity
+import com.kofar.appuk.listdata.ListDataPupuk
+import com.kofar.appuk.R
 import com.kofar.appuk.data.DataPupuk
 
 class DetailPupukActivity : AppCompatActivity() {

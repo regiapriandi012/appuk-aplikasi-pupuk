@@ -43,15 +43,22 @@ class WelcomeActivity : AppCompatActivity() {
         findViewById<Button>(R.id.button_logout_welcome).setOnClickListener {
             mGoogleSignInClient.signOut().addOnCompleteListener {
                 val intent = Intent(this, MainActivity::class.java)
+                overridePendingTransition(0, 0);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                overridePendingTransition(0, 0);
                 Toast.makeText(this, "Logging Out", Toast.LENGTH_SHORT).show()
                 startActivity(intent)
-                finish()
+                finish();
             }
         }
 
         findViewById<Button>(R.id.button_next_welcome).setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+            overridePendingTransition(0, 0);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            finish();
+            overridePendingTransition(0, 0);
+            startActivity(intent);
         }
 
         val acct = GoogleSignIn.getLastSignedInAccount(this)

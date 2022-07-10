@@ -41,12 +41,18 @@ class DataPupukAdapterEdited(var listDataPupuks: ArrayList<DataPupuk>, val conte
 
         holder.pupukCard.setOnClickListener {
             val moveWithObjectIntent = Intent(context, DetailPupukActivity::class.java)
+            activity.overridePendingTransition(0, 0);
+            moveWithObjectIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            activity.overridePendingTransition(0, 0);
             moveWithObjectIntent.putExtra(DetailPupukActivity.EXTRA_DATA_PUPUK, myData)
             context.startActivity(moveWithObjectIntent)
         }
 
         holder.editPupuk.setOnClickListener{
             val intent = Intent(activity, PupukAddUpdateActivity::class.java)
+            activity.overridePendingTransition(0, 0);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            activity.overridePendingTransition(0, 0);
             intent.putExtra(pupukhelper.EXTRA_POSITION, position)
             intent.putExtra(pupukhelper.EXTRA_PUPUK, myData)
             activity.startActivityForResult(intent, pupukhelper.REQUEST_UPDATE)

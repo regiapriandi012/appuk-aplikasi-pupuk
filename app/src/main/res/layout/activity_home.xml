@@ -36,14 +36,15 @@
         app:layout_constraintTop_toTopOf="@+id/imageView3"
         app:layout_constraintVertical_bias="0.098" />
 
-    <Button
+    <ImageView
         android:id="@+id/tombol_artikel_home"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="46dp"
         android:layout_height="46dp"
         android:layout_marginTop="10dp"
+
         android:layout_marginBottom="96dp"
-        android:drawableLeft="@drawable/ic_baseline_article_24"
+        app:srcCompat="@drawable/ic_baseline_article_24"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.646"
@@ -165,7 +166,7 @@
         android:id="@+id/imageView13"
         android:layout_width="match_parent"
         android:layout_height="251dp"
-        android:paddingRight="120dp"
+        android:paddingRight="110dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.09"

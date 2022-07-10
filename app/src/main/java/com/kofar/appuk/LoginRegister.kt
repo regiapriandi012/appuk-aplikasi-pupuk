@@ -31,12 +31,18 @@ class LoginRegister : AppCompatActivity() {
 
         findViewById<Button>(R.id.register_button).setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+            overridePendingTransition(0, 0);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            overridePendingTransition(0, 0);
+            startActivity(intent);
         }
 
         findViewById<Button>(R.id.button_register).setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
+            overridePendingTransition(0, 0);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            overridePendingTransition(0, 0);
+            startActivity(intent);
         }
 
         FirebaseApp.initializeApp(this)
@@ -50,6 +56,8 @@ class LoginRegister : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         findViewById<Button>(R.id.button_google).setOnClickListener { view: View? ->
+            overridePendingTransition(0, 0);
+            overridePendingTransition(0, 0);
             Toast.makeText(this, "Loggin In", Toast.LENGTH_SHORT).show()
             signInGoogle()
         }

@@ -36,27 +36,43 @@ class AkunActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.setting_theme).setOnClickListener {
             val intent = Intent(this, SettingPreferenceActivity::class.java)
-            startActivity(intent)
+            overridePendingTransition(0, 0);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            overridePendingTransition(0, 0);
+            startActivity(intent);
         }
 
         findViewById<Button>(R.id.upload_blog).setOnClickListener {
             val intent = Intent(this, ArtikelAddUpdateActivity::class.java)
+            overridePendingTransition(0, 0);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            overridePendingTransition(0, 0);
+            startActivity(intent);
             startActivityForResult(intent, com.kofar.appuk.helper.artikelhelper.REQUEST_ADD)
         }
 
         findViewById<Button>(R.id.upload_produk).setOnClickListener {
             val intent = Intent(this, PupukAddUpdateActivity::class.java)
+            overridePendingTransition(0, 0);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            overridePendingTransition(0, 0);
             startActivityForResult(intent, com.kofar.appuk.helper.pupukhelper.REQUEST_ADD)
         }
 
         findViewById<Button>(R.id.my_blog).setOnClickListener {
             val intent = Intent(this, ListDataArtikelEditedActivity::class.java)
-            startActivity(intent)
+            overridePendingTransition(0, 0);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            overridePendingTransition(0, 0);
+            startActivity(intent);
         }
 
         findViewById<Button>(R.id.my_pupuk).setOnClickListener {
             val intent = Intent(this, ListDataPupukEditedActivity::class.java)
-            startActivity(intent)
+            overridePendingTransition(0, 0);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            overridePendingTransition(0, 0);
+            startActivity(intent);
         }
 
 
@@ -70,6 +86,9 @@ class AkunActivity : AppCompatActivity() {
         findViewById<Button>(R.id.button_logout).setOnClickListener {
             mGoogleSignInClient.signOut().addOnCompleteListener {
                 val intent = Intent(this, MainActivity::class.java)
+                overridePendingTransition(0, 0);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                overridePendingTransition(0, 0);
                 Toast.makeText(this, "Logging Out", Toast.LENGTH_SHORT).show()
                 startActivity(intent)
                 finish()
@@ -78,7 +97,10 @@ class AkunActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.tombol_kembali_akun).setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+            overridePendingTransition(0, 0);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            overridePendingTransition(0, 0);
+            startActivity(intent);
         }
 
         val acct = GoogleSignIn.getLastSignedInAccount(this)

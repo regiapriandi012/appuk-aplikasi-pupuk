@@ -60,6 +60,9 @@ class SettingPreferenceActivity : AppCompatActivity(), View.OnClickListener {
             saveSetting(isDark)
             val resultIntent = Intent()
             setResult(RESULT_CODE, resultIntent)
+            overridePendingTransition(0, 0);
+            resultIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            overridePendingTransition(0, 0);
             finish()
         }
     }

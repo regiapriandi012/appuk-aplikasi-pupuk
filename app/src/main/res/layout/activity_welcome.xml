@@ -41,7 +41,7 @@
 
         <Button
             android:id="@+id/button_logout_welcome"
-            android:layout_width="350dp"
+            android:layout_width="250dp"
             android:layout_height="61dp"
             android:layout_marginBottom="52dp"
             android:backgroundTint="#FFFFFF"
@@ -55,7 +55,7 @@
 
         <Button
             android:id="@+id/button_next_welcome"
-            android:layout_width="350dp"
+            android:layout_width="250dp"
             android:layout_height="61dp"
             android:backgroundTint="#4CAD73"
             android:text="Next"

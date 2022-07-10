@@ -23,7 +23,10 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val moveWithDataIntent = Intent(this@LoginActivity, WelcomeActivity::class.java)
+            val moveWithDataIntent = Intent(this, WelcomeActivity::class.java)
+            overridePendingTransition(0, 0);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            overridePendingTransition(0, 0);
             moveWithDataIntent.putExtra(WelcomeActivity.EXTRA_NAMA, username)
             startActivity(moveWithDataIntent)
         }

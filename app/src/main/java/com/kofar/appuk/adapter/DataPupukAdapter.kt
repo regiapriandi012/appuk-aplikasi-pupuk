@@ -1,5 +1,6 @@
 package com.kofar.appuk.adapter
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -12,11 +13,11 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.kofar.appuk.detaildata.DetailPupukActivity
 import com.kofar.appuk.data.DataPupuk
+import com.kofar.appuk.detaildata.DetailPupukActivity
 
 
-class DataPupukAdapter(var listDataPupuks: ArrayList<DataPupuk>, val context: Context) :
+class DataPupukAdapter(var listDataPupuks: ArrayList<DataPupuk>, val context: Context, val activity: Activity) :
     RecyclerView.Adapter<DataPupukAdapter.GridViewHolder>() {
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): GridViewHolder {
         val view: View = LayoutInflater.from(viewGroup.context).inflate(com.kofar.appuk.R.layout.item_list_pupuk, viewGroup, false)
@@ -37,6 +38,9 @@ class DataPupukAdapter(var listDataPupuks: ArrayList<DataPupuk>, val context: Co
 
         holder.pupukCard.setOnClickListener {
             val moveWithObjectIntent = Intent(context, DetailPupukActivity::class.java)
+            activity.overridePendingTransition(0, 0);
+            moveWithObjectIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            activity.overridePendingTransition(0, 0);
             moveWithObjectIntent.putExtra(DetailPupukActivity.EXTRA_DATA_PUPUK, myData)
             context.startActivity(moveWithObjectIntent)
         }

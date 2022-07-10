@@ -65,6 +65,9 @@ class DataArtikelAdapter(var listMyData: ArrayList<DataArtikel>, private val act
 
                 findViewById<CardView>(R.id.artikel_card_view).setOnClickListener {
                     val moveWithObjectIntent = Intent(context, DetailArtikelActivity::class.java)
+                    activity.overridePendingTransition(0, 0);
+                    moveWithObjectIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    activity.overridePendingTransition(0, 0);
                     moveWithObjectIntent.putExtra(DetailArtikelActivity.EXTRA_DATA_ARTIKEL, myData)
                     context.startActivity(moveWithObjectIntent)
                 }

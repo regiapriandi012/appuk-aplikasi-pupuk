@@ -23,37 +23,60 @@ class HomeActivity : AppCompatActivity() {
 
         }
 
-        findViewById<Button>(R.id.tombol_artikel_home).setOnClickListener {
-            this.startActivity(Intent(this, ListDataArtikel::class.java))
+        findViewById<ImageView>(R.id.imageView12).setOnClickListener {
+            val intent = Intent(this, ListDataArtikel::class.java)
+            overridePendingTransition(0, 0);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            overridePendingTransition(0, 0);
+            startActivity(intent);
         }
 
-        findViewById<ImageView>(R.id.imageView12).setOnClickListener {
-            this.startActivity(Intent(this, ListDataArtikel::class.java))
+        findViewById<ImageView>(R.id.tombol_artikel_home).setOnClickListener {
+            val intent = Intent(this, ListDataArtikel::class.java)
+            overridePendingTransition(0, 0);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            overridePendingTransition(0, 0);
+            startActivity(intent);
         }
 
         findViewById<ImageView>(R.id.imageView13).setOnClickListener {
             val intent = Intent(this, ListDataPupuk::class.java)
-            startActivity(intent)
+            overridePendingTransition(0, 0);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            overridePendingTransition(0, 0);
+            startActivity(intent);
         }
 
         findViewById<Button>(R.id.tombol_belanja_pupuk_home).setOnClickListener {
             val intent = Intent(this, ListDataPupuk::class.java)
-            startActivity(intent)
+            overridePendingTransition(0, 0);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            overridePendingTransition(0, 0);
+            startActivity(intent);
         }
 
         findViewById<Button>(R.id.tombol_akun_home).setOnClickListener {
             val intent = Intent(this, AkunActivity::class.java)
-            startActivity(intent)
+            overridePendingTransition(0, 0);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            overridePendingTransition(0, 0);
+            startActivity(intent);
         }
 
         findViewById<Button>(R.id.tombol_keranjang_belanja_home).setOnClickListener {
             val intent = Intent(this, ListDataPupuk::class.java)
-            startActivity(intent)
+            overridePendingTransition(0, 0);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            overridePendingTransition(0, 0);
+            startActivity(intent);
         }
 
         findViewById<Button>(R.id.tombol_home_home).setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+            overridePendingTransition(0, 0);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            overridePendingTransition(0, 0);
+            startActivity(intent);
         }
     }
 }

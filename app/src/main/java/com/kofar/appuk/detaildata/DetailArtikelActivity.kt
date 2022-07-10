@@ -12,9 +12,9 @@ import androidx.appcompat.app.AppCompatDelegate
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.kofar.appuk.AkunActivity
-import com.kofar.appuk.listdata.ListDataArtikel
 import com.kofar.appuk.R
 import com.kofar.appuk.data.DataArtikel
+import com.kofar.appuk.listdata.ListDataArtikel
 
 class DetailArtikelActivity : AppCompatActivity() {
 
@@ -58,12 +58,18 @@ class DetailArtikelActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.tombol_kembali_artikel_detail).setOnClickListener {
             val intent = Intent(this, ListDataArtikel::class.java)
-            startActivity(intent)
+            overridePendingTransition(0, 0);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            overridePendingTransition(0, 0);
+            startActivity(intent);
         }
 
         findViewById<Button>(R.id.tombol_akun_artikel_detail).setOnClickListener {
             val intent = Intent(this, AkunActivity::class.java)
-            startActivity(intent)
+            overridePendingTransition(0, 0);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            overridePendingTransition(0, 0);
+            startActivity(intent);
         }
     }
 }

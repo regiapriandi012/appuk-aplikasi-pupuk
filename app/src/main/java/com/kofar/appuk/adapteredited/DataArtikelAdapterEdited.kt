@@ -64,12 +64,18 @@ class DataArtikelAdapterEdited(var listMyData: ArrayList<DataArtikel>, private v
 
                 findViewById<CardView>(R.id.artikel_card_view).setOnClickListener {
                     val moveWithObjectIntent = Intent(context, DetailArtikelActivity::class.java)
+                    activity.overridePendingTransition(0, 0);
+                    moveWithObjectIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    activity.overridePendingTransition(0, 0);
                     moveWithObjectIntent.putExtra(DetailArtikelActivity.EXTRA_DATA_ARTIKEL, myData)
                     context.startActivity(moveWithObjectIntent)
                 }
 
                 findViewById<Button>(R.id.edit_artikel).setOnClickListener{
                     val intent = Intent(activity, ArtikelAddUpdateActivity::class.java)
+                    activity.overridePendingTransition(0, 0);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    activity.overridePendingTransition(0, 0);
                     intent.putExtra(EXTRA_POSITION, position)
                     intent.putExtra(EXTRA_ARTIKEL, myData)
                     activity.startActivityForResult(intent, artikelhelper.REQUEST_UPDATE)

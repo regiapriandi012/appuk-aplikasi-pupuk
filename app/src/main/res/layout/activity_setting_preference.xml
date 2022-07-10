@@ -8,7 +8,7 @@
 
     <Button
         android:id="@+id/save_theme_button"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="67dp"
         android:backgroundTint="#4CAD73"
         android:text="Save"

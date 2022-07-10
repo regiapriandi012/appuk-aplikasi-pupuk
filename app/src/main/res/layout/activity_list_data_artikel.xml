@@ -24,7 +24,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_data_artikel"
         android:layout_width="match_parent"
-        android:layout_height="559dp"
+        android:layout_height="530dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"

@@ -57,7 +57,7 @@ class ListDataArtikel : AppCompatActivity() {
 
         binding.rvDataArtikel.layoutManager = LinearLayoutManager(this)
         binding.rvDataArtikel.setHasFixedSize(true)
-        artikelAdapter = DataArtikelAdapter(listArtikel, this)
+        artikelAdapter = DataArtikelAdapter(this)
 
         binding.rvDataArtikel.adapter = artikelAdapter
         artikelHelper = ArtikelHelper.getInstance(applicationContext)

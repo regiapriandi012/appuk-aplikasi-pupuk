@@ -16,9 +16,10 @@ import com.kofar.appuk.R
 import com.kofar.appuk.data.DataArtikel
 import com.kofar.appuk.detaildata.DetailArtikelActivity
 
-class DataArtikelAdapter(var listMyData: ArrayList<DataArtikel>, private val activity: Activity) :
+class DataArtikelAdapter(private val activity: Activity) :
     RecyclerView.Adapter<DataArtikelAdapter.ListViewHolder>() {
 
+    var listMyData = ArrayList<DataArtikel>()
     private var artikel: DataArtikel? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {

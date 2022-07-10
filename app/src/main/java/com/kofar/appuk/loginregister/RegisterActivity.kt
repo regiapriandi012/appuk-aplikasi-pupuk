@@ -1,10 +1,12 @@
-package com.kofar.appuk
+package com.kofar.appuk.loginregister
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import com.kofar.appuk.R
+import com.kofar.appuk.WelcomeActivity
 
 class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

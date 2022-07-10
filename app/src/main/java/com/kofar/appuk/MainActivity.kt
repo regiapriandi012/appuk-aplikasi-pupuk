@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import com.kofar.appuk.data_theme.SettingModel
 import com.kofar.appuk.data_theme.SettingPreference
 import com.kofar.appuk.databinding.ActivityMainBinding
+import com.kofar.appuk.loginregister.LoginRegister
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

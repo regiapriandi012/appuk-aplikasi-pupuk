@@ -1,4 +1,4 @@
-package com.kofar.appuk
+package com.kofar.appuk.loginregister
 
 import android.content.Context
 import android.content.Intent
@@ -18,6 +18,8 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
+import com.kofar.appuk.R
+import com.kofar.appuk.WelcomeActivity
 
 
 class LoginRegister : AppCompatActivity() {

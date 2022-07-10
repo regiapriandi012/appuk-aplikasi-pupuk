@@ -31,7 +31,7 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent);
         }
 
-        findViewById<ImageView>(R.id.tombol_artikel_home).setOnClickListener {
+        findViewById<Button>(R.id.tombol_artikel_home).setOnClickListener {
             val intent = Intent(this, ListDataArtikel::class.java)
             overridePendingTransition(0, 0);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);

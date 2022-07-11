@@ -38,6 +38,7 @@ class PupukAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         binding = ActivityPupukAddUpdateBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.title = ""
         pupuk = intent.getParcelableExtra(EXTRA_PUPUK)
 
         firestore = Firebase.firestore
@@ -66,7 +67,7 @@ class PupukAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
             btnTitle = "Simpan"
         }
 
-        supportActionBar?.title = actionBarTitle
+        //supportActionBar?.title = actionBarTitle
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         binding.btnSubmit.text = btnTitle
         binding.btnSubmit.setOnClickListener(this)
@@ -181,5 +182,8 @@ class PupukAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
             .setNegativeButton("Tidak") { dialog, _ -> dialog.cancel() }
         val alertDialog = alertDialogBuilder.create()
         alertDialog.show()
+    }
+
+    override fun onBackPressed() {
     }
 }

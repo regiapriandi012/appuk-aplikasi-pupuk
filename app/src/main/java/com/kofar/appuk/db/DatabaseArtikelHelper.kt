@@ -8,7 +8,7 @@ import com.kofar.appuk.db.DatabaseArtikelContract.QuoteColumns.Companion.TABLE_A
 internal class DatabaseArtikelHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,
     null, DATABASE_VERSION) {
     companion object {
-        private const val DATABASE_NAME = "database_artikel_final_bismillah"
+        private const val DATABASE_NAME = "artikel_finallll_bismillah"
         private const val DATABASE_VERSION = 5
         private const val SQL_CREATE_TABLE_QUOTE = "CREATE TABLE $TABLE_ARTIKEL" +
                 " (${DatabaseArtikelContract.QuoteColumns._ID} INTEGER PRIMARY KEY AUTOINCREMENT," +

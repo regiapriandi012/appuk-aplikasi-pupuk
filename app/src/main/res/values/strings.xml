@@ -4,6 +4,8 @@
     <string name="dark_theme">Dark Theme</string>
     <string name="light_theme">Light Theme</string>
     <string name="appuk_title">APPUK</string>
+    <string name="incoming_message">incoming message</string>
+    <string name="coming_from">coming from</string>
     <string name="appuk_subtitle">Aplikasi jual beli dan informasi mengenai pupuk serta obat-obatan atau pestisida untuk pertanian</string>
 
     <string-array name="data_nama_pupuk">

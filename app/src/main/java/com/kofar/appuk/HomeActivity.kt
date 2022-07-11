@@ -2,7 +2,6 @@ package com.kofar.appuk
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -31,7 +30,7 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent);
         }
 
-        findViewById<Button>(R.id.tombol_artikel_home).setOnClickListener {
+        findViewById<ImageView>(R.id.tombol_artikel_home).setOnClickListener {
             val intent = Intent(this, ListDataArtikel::class.java)
             overridePendingTransition(0, 0);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -47,7 +46,7 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent);
         }
 
-        findViewById<Button>(R.id.tombol_belanja_pupuk_home).setOnClickListener {
+        findViewById<ImageView>(R.id.tombol_belanja_pupuk_home).setOnClickListener {
             val intent = Intent(this, ListDataPupuk::class.java)
             overridePendingTransition(0, 0);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -55,7 +54,7 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent);
         }
 
-        findViewById<Button>(R.id.tombol_akun_home).setOnClickListener {
+        findViewById<ImageView>(R.id.tombol_akun_home).setOnClickListener {
             val intent = Intent(this, AkunActivity::class.java)
             overridePendingTransition(0, 0);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -63,7 +62,7 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent);
         }
 
-        findViewById<Button>(R.id.tombol_keranjang_belanja_home).setOnClickListener {
+        findViewById<ImageView>(R.id.tombol_keranjang_belanja_home).setOnClickListener {
             val intent = Intent(this, ListDataPupuk::class.java)
             overridePendingTransition(0, 0);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -71,12 +70,15 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent);
         }
 
-        findViewById<Button>(R.id.tombol_home_home).setOnClickListener {
+        findViewById<ImageView>(R.id.tombol_home_home).setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
             overridePendingTransition(0, 0);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             overridePendingTransition(0, 0);
             startActivity(intent);
         }
+    }
+
+    override fun onBackPressed() {
     }
 }

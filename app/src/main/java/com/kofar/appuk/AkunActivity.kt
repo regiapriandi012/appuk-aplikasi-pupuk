@@ -1,6 +1,8 @@
 package com.kofar.appuk
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
@@ -8,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -22,6 +25,10 @@ import com.kofar.appuk.listdataedited.ListDataPupukEditedActivity
 
 class AkunActivity : AppCompatActivity() {
 
+    companion object {
+        private const val SMS_REQUEST_CODE = 101
+    }
+
     // declare the GoogleSignInClient
     lateinit var mGoogleSignInClient: GoogleSignInClient
 
@@ -33,6 +40,14 @@ class AkunActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_akun)
         supportActionBar?.hide()
+
+        findViewById<Button>(R.id.btn_permission).setOnClickListener{
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.RECEIVE_SMS) !=
+                PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.RECEIVE_SMS),
+                    SMS_REQUEST_CODE)
+            }
+        }
 
         findViewById<Button>(R.id.setting_theme).setOnClickListener {
             val intent = Intent(this, SettingPreferenceActivity::class.java)
@@ -52,14 +67,14 @@ class AkunActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.upload_produk).setOnClickListener {
-            val intent = Intent(this, PupukAddUpdateActivity::class.java)
+            val intent = Intent(this@AkunActivity, PupukAddUpdateActivity::class.java)
             overridePendingTransition(0, 0);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             overridePendingTransition(0, 0);
             startActivityForResult(intent, com.kofar.appuk.helper.pupukhelper.REQUEST_ADD)
         }
 
-        findViewById<Button>(R.id.my_blog).setOnClickListener {
+        findViewById<ImageView>(R.id.my_blog).setOnClickListener {
             val intent = Intent(this, ListDataArtikelEditedActivity::class.java)
             overridePendingTransition(0, 0);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -95,7 +110,7 @@ class AkunActivity : AppCompatActivity() {
             }
         }
 
-        findViewById<Button>(R.id.tombol_kembali_akun).setOnClickListener {
+        findViewById<ImageView>(R.id.tombol_kembali_akun).setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
             overridePendingTransition(0, 0);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -117,6 +132,20 @@ class AkunActivity : AppCompatActivity() {
             findViewById<TextView>(R.id.welcome_name_account).text = personName
             findViewById<TextView>(R.id.email_akun).text = personEmail
 
+        }
+    }
+
+    override fun onBackPressed() {
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults:
+    IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == SMS_REQUEST_CODE) {
+            when {
+                grantResults[0] == PackageManager.PERMISSION_GRANTED -> Toast.makeText(this, "Sms receiver permission diterima", Toast.LENGTH_SHORT).show()
+                    else -> Toast.makeText(this, "Sms receiver permission ditolak", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }

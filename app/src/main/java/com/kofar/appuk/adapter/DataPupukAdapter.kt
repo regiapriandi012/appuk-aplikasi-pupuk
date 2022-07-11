@@ -34,7 +34,7 @@ class DataPupukAdapter(var listDataPupuks: ArrayList<DataPupuk>, val context: Co
             .apply(RequestOptions().override(350, 550))
             .into(holder.imgPhoto)
 
-        holder.pupukCard.setOnClickListener{ Toast.makeText(holder.itemView.context, "Kamu Memilih" + listDataPupuks[holder.adapterPosition].nama_pupuk, Toast.LENGTH_SHORT).show() }
+        holder.pupukCard.setOnClickListener{ Toast.makeText(holder.itemView.context, "Kamu Memilih " + listDataPupuks[holder.adapterPosition].nama_pupuk, Toast.LENGTH_SHORT).show() }
 
         holder.pupukCard.setOnClickListener {
             val moveWithObjectIntent = Intent(context, DetailPupukActivity::class.java)

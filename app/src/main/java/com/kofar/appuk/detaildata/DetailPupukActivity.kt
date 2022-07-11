@@ -5,7 +5,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.os.Parcelable
-import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -46,7 +46,7 @@ class DetailPupukActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.harga_pupuk_detail).text = myData?.harga_pupuk.toString()
         findViewById<TextView>(R.id.keterangan_pupuk).text = myData?.keterangan_pupuk.toString()
 
-        findViewById<Button>(R.id.tombol_kembali2).setOnClickListener {
+        findViewById<ImageView>(R.id.tombol_kembali_pupuk_detail).setOnClickListener {
             val intent = Intent(this, ListDataPupuk::class.java)
             overridePendingTransition(0, 0);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -54,12 +54,15 @@ class DetailPupukActivity : AppCompatActivity() {
             startActivity(intent);
         }
 
-        findViewById<Button>(R.id.tombol_akun2).setOnClickListener {
+        findViewById<ImageView>(R.id.tombol_akun_pupuk_detail).setOnClickListener {
             val intent = Intent(this, AkunActivity::class.java)
             overridePendingTransition(0, 0);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             overridePendingTransition(0, 0);
             startActivity(intent);
         }
+    }
+
+    override fun onBackPressed() {
     }
 }

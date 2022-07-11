@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
@@ -50,7 +50,7 @@ class ListDataPupuk : AppCompatActivity() {
         adapter = DataPupukAdapter(listPupuk, this, this)
         loadQuotes()
 
-        findViewById<Button>(R.id.tombol_belanja_pupuk).setOnClickListener {
+        findViewById<ImageView>(R.id.tombol_belanja_pupuk_pupuk).setOnClickListener {
             val intent = Intent(this, ListDataPupuk::class.java)
             overridePendingTransition(0, 0);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -58,7 +58,7 @@ class ListDataPupuk : AppCompatActivity() {
             startActivity(intent);
         }
 
-        findViewById<Button>(R.id.tombol_akun).setOnClickListener {
+        findViewById<ImageView>(R.id.tombol_akun_pupuk).setOnClickListener {
             val intent = Intent(this, AkunActivity::class.java)
             overridePendingTransition(0, 0);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -66,7 +66,7 @@ class ListDataPupuk : AppCompatActivity() {
             startActivity(intent);
         }
 
-        findViewById<Button>(R.id.tombol_kembali).setOnClickListener {
+        findViewById<ImageView>(R.id.tombol_kembali_pupuk).setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
             overridePendingTransition(0, 0);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -74,7 +74,7 @@ class ListDataPupuk : AppCompatActivity() {
             startActivity(intent);
         }
 
-        findViewById<Button>(R.id.tombol_artikel).setOnClickListener {
+        findViewById<ImageView>(R.id.tombol_artikel_pupuk).setOnClickListener {
             val intent = Intent(this, ListDataArtikel::class.java)
             overridePendingTransition(0, 0);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -82,7 +82,7 @@ class ListDataPupuk : AppCompatActivity() {
             startActivity(intent);
         }
 
-        findViewById<Button>(R.id.tombol_keranjang_belanja).setOnClickListener {
+        findViewById<ImageView>(R.id.tombol_keranjang_belanja_pupuk).setOnClickListener {
             val intent = Intent(this, ListDataPupuk::class.java)
             overridePendingTransition(0, 0);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -90,7 +90,7 @@ class ListDataPupuk : AppCompatActivity() {
             startActivity(intent);
         }
 
-        findViewById<Button>(R.id.tombol_home).setOnClickListener {
+        findViewById<ImageView>(R.id.tombol_home_pupuk).setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
             overridePendingTransition(0, 0);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -168,5 +168,8 @@ class ListDataPupuk : AppCompatActivity() {
                     }
             }
         }
+    }
+
+    override fun onBackPressed() {
     }
 }

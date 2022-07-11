@@ -59,7 +59,7 @@
         app:layout_constraintVertical_bias="0.761" />
 
     <Button
-        android:id="@+id/tombol_kembali_tema"
+        android:id="@+id/tombol_kembali_tema_inactive"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="46dp"
         android:layout_height="46dp"
@@ -68,10 +68,10 @@
         android:drawableLeft="@drawable/ic_baseline_arrow_back_ios_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.016" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <RadioGroup
         android:id="@+id/rg_love_mu"
@@ -103,5 +103,17 @@
             tools:layout_editor_absoluteX="201dp"
             tools:layout_editor_absoluteY="346dp" />
     </RadioGroup>
+
+    <ImageView
+        android:id="@+id/tombol_kembali_tema"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

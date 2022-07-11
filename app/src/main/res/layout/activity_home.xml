@@ -21,12 +21,14 @@
         app:srcCompat="@drawable/logos" />
 
     <Button
-        android:id="@+id/tombol_keranjang_belanja_home"
+        android:id="@+id/tombol_keranjang_belanja_home_inactive"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="46dp"
         android:layout_height="46dp"
         android:layout_marginTop="10dp"
+        android:enabled="false"
         android:layout_marginBottom="96dp"
+        android:stateListAnimator="@null"
         android:drawableLeft="@drawable/ic_baseline_add_shopping_cart_24"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
@@ -37,13 +39,14 @@
         app:layout_constraintVertical_bias="0.098" />
 
     <Button
-        android:id="@+id/tombol_artikel_home"
+        android:id="@+id/tombol_artikel_home_inactive"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="46dp"
         android:layout_height="46dp"
         android:layout_marginTop="10dp"
-
+        android:stateListAnimator="@null"
         android:layout_marginBottom="96dp"
+        android:enabled="false"
         android:drawableLeft="@drawable/ic_baseline_article_24"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,12 +56,14 @@
         app:layout_constraintVertical_bias="0.098" />
 
     <Button
-        android:id="@+id/tombol_belanja_pupuk_home"
+        android:id="@+id/tombol_belanja_pupuk_home_inactive"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="46dp"
         android:layout_height="46dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="96dp"
+        android:stateListAnimator="@null"
+        android:enabled="false"
         android:drawableLeft="@drawable/ic_baseline_grass_24"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,12 +73,14 @@
         app:layout_constraintVertical_bias="0.098" />
 
     <Button
-        android:id="@+id/tombol_home_home"
+        android:id="@+id/tombol_home_home_inactive"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="46dp"
         android:layout_height="46dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="96dp"
+        android:stateListAnimator="@null"
+        android:enabled="false"
         android:drawableLeft="@drawable/ic_baseline_home_24_black"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,10 +90,11 @@
         app:layout_constraintVertical_bias="0.098" />
 
     <Button
-        android:id="@+id/tombol_akun_home"
+        android:id="@+id/tombol_akun_home_inactive"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="46dp"
         android:layout_height="46dp"
+        android:stateListAnimator="@null"
         android:drawableLeft="@drawable/ic_baseline_account_circle_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -161,6 +169,70 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
         app:srcCompat="@drawable/img_1" />
+
+    <ImageView
+        android:id="@+id/tombol_keranjang_belanja_home"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="560dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.898"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/tombol_belanja_pupuk_home"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="560dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.369"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/tombol_artikel_home"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="560dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.646"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/tombol_akun_home"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <ImageView
+        android:id="@+id/tombol_home_home"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="560dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView13"

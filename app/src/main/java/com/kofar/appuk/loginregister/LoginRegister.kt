@@ -72,6 +72,7 @@ class LoginRegister : AppCompatActivity() {
 
     // onActivityResult() function : this is where
     // we provide the task and data for the Google Account
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == Req_Code) {

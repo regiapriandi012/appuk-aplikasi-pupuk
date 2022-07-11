@@ -9,14 +9,12 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.kofar.appuk.addupdate.PupukAddUpdateActivity
 import com.kofar.appuk.data.DataPupuk
-import com.kofar.appuk.detaildata.DetailPupukActivity
 import com.kofar.appuk.helper.pupukhelper
 
 
@@ -36,17 +34,6 @@ class DataPupukAdapterEdited(var listDataPupuks: ArrayList<DataPupuk>, val conte
             .load(listDataPupuks[position].gambar_pupuk)
             .apply(RequestOptions().override(350, 550))
             .into(holder.imgPhoto)
-
-        holder.pupukCard.setOnClickListener{ Toast.makeText(holder.itemView.context, "Kamu Memilih" + listDataPupuks[holder.adapterPosition].nama_pupuk, Toast.LENGTH_SHORT).show() }
-
-        holder.pupukCard.setOnClickListener {
-            val moveWithObjectIntent = Intent(context, DetailPupukActivity::class.java)
-            activity.overridePendingTransition(0, 0);
-            moveWithObjectIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-            activity.overridePendingTransition(0, 0);
-            moveWithObjectIntent.putExtra(DetailPupukActivity.EXTRA_DATA_PUPUK, myData)
-            context.startActivity(moveWithObjectIntent)
-        }
 
         holder.editPupuk.setOnClickListener{
             val intent = Intent(activity, PupukAddUpdateActivity::class.java)

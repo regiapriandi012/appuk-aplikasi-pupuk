@@ -3,6 +3,7 @@ package com.kofar.appuk
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.kofar.appuk.data_theme.SettingModel
@@ -19,12 +20,6 @@ class SettingPreferenceActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun showPreferenceInForm() {
-        //binding.edtName.setText(settingModel.name)
-        //binding.edtEmail.setText(settingModel.email)
-        //binding.edtAge.setText(settingModel.age.toString())
-        //binding.edtPekerjaan.setText(settingModel.pekerjaan)
-        //binding.edtHobi.setText(settingModel.hobi)
-        //binding.edtPhone.setText(settingModel.phoneNumber)
         if (settingModel.isDarkTheme) {
             binding.rbYes.isChecked = true
         } else {
@@ -52,6 +47,14 @@ class SettingPreferenceActivity : AppCompatActivity(), View.OnClickListener {
         showPreferenceInForm()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        findViewById<ImageView>(R.id.tombol_kembali_tema).setOnClickListener {
+            val intent = Intent(this, AkunActivity::class.java)
+            overridePendingTransition(0, 0);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            overridePendingTransition(0, 0);
+            startActivity(intent);
+        }
+
     }
 
     override fun onClick(p0: View?) {
@@ -65,5 +68,8 @@ class SettingPreferenceActivity : AppCompatActivity(), View.OnClickListener {
             overridePendingTransition(0, 0);
             finish()
         }
+    }
+
+    override fun onBackPressed() {
     }
 }

@@ -17,34 +17,35 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/my_blog"
+            android:id="@+id/my_blog_inactive"
             android:layout_width="155dp"
             android:layout_height="57dp"
-            android:backgroundTint="#FFFFFF"
+            android:backgroundTint="#4CAD73"
+            android:enabled="false"
             android:text="My Blog"
-            android:textColor="#4CAD73"
+            android:textColor="#FFFFFF"
             app:cornerRadius="20px"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.092"
+            app:layout_constraintHorizontal_bias="0.097"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.707" />
+            app:layout_constraintVertical_bias="0.779" />
 
         <Button
             android:id="@+id/my_pupuk"
             android:layout_width="155dp"
             android:layout_height="57dp"
-            android:backgroundTint="#FFFFFF"
+            android:backgroundTint="#4CAD73"
             android:text="My Pupuk"
-            android:textColor="#4CAD73"
+            android:textColor="#FFFFFF"
             app:cornerRadius="20px"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.881"
+            app:layout_constraintHorizontal_bias="0.878"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.708" />
+            app:layout_constraintVertical_bias="0.78" />
 
         <Button
             android:id="@+id/button_logout"
@@ -56,14 +57,13 @@
             app:cornerRadius="20px"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.841"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.952" />
+            app:layout_constraintVertical_bias="0.677" />
 
         <Button
             android:id="@+id/setting_theme"
-            android:layout_width="96dp"
+            android:layout_width="155dp"
             android:layout_height="57dp"
             android:backgroundTint="#4CAD73"
             android:text="Theme Mode"
@@ -71,32 +71,17 @@
             app:cornerRadius="20px"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.079"
+            app:layout_constraintHorizontal_bias="0.097"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.952" />
+            app:layout_constraintVertical_bias="0.966" />
 
         <Button
-            android:id="@+id/upload_blog"
+            android:id="@+id/btn_permission"
             android:layout_width="155dp"
             android:layout_height="57dp"
             android:backgroundTint="#4CAD73"
-            android:text="Upload Blog"
-            android:textColor="@color/white"
-            app:cornerRadius="20px"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.092"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.869" />
-
-        <Button
-            android:id="@+id/upload_produk"
-            android:layout_width="155dp"
-            android:layout_height="57dp"
-            android:backgroundTint="#4CAD73"
-            android:text="Jual Pupuk"
+            android:text=" SMS PERMISSION"
             android:textColor="@color/white"
             app:cornerRadius="20px"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -104,7 +89,37 @@
             app:layout_constraintHorizontal_bias="0.878"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.869" />
+            app:layout_constraintVertical_bias="0.966" />
+
+        <Button
+            android:id="@+id/upload_blog"
+            android:layout_width="155dp"
+            android:layout_height="57dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="Upload Blog"
+            android:textColor="#4CAD73"
+            app:cornerRadius="20px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.097"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.865" />
+
+        <Button
+            android:id="@+id/upload_produk"
+            android:layout_width="155dp"
+            android:layout_height="57dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="Jual Pupuk"
+            android:textColor="#4CAD73"
+            app:cornerRadius="20px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.878"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.864" />
 
         <TextView
             android:id="@+id/welcome_name_account"
@@ -184,7 +199,7 @@
             app:layout_constraintVertical_bias="0.873" />
 
         <Button
-        android:id="@+id/tombol_kembali_akun"
+        android:id="@+id/tombol_kembali_akun_inactive"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="46dp"
         android:layout_height="46dp"
@@ -198,5 +213,30 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.016" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/my_blog"
+            android:layout_width="160dp"
+            android:layout_height="63dp"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.097"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.779" />
+
+        <ImageView
+            android:id="@+id/tombol_kembali_akun"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.068"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.035" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

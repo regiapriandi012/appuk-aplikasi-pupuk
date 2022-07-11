@@ -5,7 +5,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.os.Parcelable
-import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -56,7 +56,7 @@ class DetailArtikelActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.paragraf_empat).text = dataArtikelDetail?.paragraf_empat.toString()
         findViewById<TextView>(R.id.paragraf_lima).text = dataArtikelDetail?.paragraf_lima.toString()
 
-        findViewById<Button>(R.id.tombol_kembali_artikel_detail).setOnClickListener {
+        findViewById<ImageView>(R.id.tombol_kembali_artikel_detail).setOnClickListener {
             val intent = Intent(this, ListDataArtikel::class.java)
             overridePendingTransition(0, 0);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -64,12 +64,15 @@ class DetailArtikelActivity : AppCompatActivity() {
             startActivity(intent);
         }
 
-        findViewById<Button>(R.id.tombol_akun_artikel_detail).setOnClickListener {
+        findViewById<ImageView>(R.id.tombol_akun_artikel_detail).setOnClickListener {
             val intent = Intent(this, AkunActivity::class.java)
             overridePendingTransition(0, 0);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             overridePendingTransition(0, 0);
             startActivity(intent);
         }
+    }
+
+    override fun onBackPressed() {
     }
 }

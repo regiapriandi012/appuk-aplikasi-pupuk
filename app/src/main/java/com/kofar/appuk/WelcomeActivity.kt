@@ -72,4 +72,7 @@ class WelcomeActivity : AppCompatActivity() {
             findViewById<TextView>(R.id.welcome_text).text = personName
         }
     }
+
+    override fun onBackPressed() {
+    }
 }

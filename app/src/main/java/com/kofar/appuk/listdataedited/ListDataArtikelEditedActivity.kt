@@ -3,7 +3,7 @@ package com.kofar.appuk.listdataedited
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
@@ -88,7 +88,7 @@ class ListDataArtikelEditedActivity : AppCompatActivity() {
             }
         }
 
-        findViewById<Button>(R.id.tombol_kembali_artikel).setOnClickListener {
+        findViewById<ImageView>(R.id.tombol_kembali_artikel).setOnClickListener {
             val intent = Intent(this, AkunActivity::class.java)
             overridePendingTransition(0, 0);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -118,6 +118,9 @@ class ListDataArtikelEditedActivity : AppCompatActivity() {
 
     private fun showSnackbarMessage(message: String) {
         Snackbar.make(binding.rvDataArtikel, message, Snackbar.LENGTH_SHORT).show()
+    }
+
+    override fun onBackPressed() {
     }
 
 }

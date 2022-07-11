@@ -59,7 +59,7 @@ class DataArtikelAdapter(private val activity: Activity) :
                 findViewById<CardView>(R.id.artikel_card_view).setOnClickListener {
                     Toast.makeText(
                         itemView.context,
-                        "Kamu Membaca" + listMyData[adapterPosition].judul_artikel,
+                        "Kamu Membaca " + listMyData[adapterPosition].judul_artikel,
                         Toast.LENGTH_SHORT
                     ).show()
                 }

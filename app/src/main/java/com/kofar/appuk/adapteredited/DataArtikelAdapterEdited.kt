@@ -8,15 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.kofar.appuk.R
 import com.kofar.appuk.addupdate.ArtikelAddUpdateActivity
 import com.kofar.appuk.data.DataArtikel
-import com.kofar.appuk.detaildata.DetailArtikelActivity
 import com.kofar.appuk.helper.artikelhelper
 import com.kofar.appuk.helper.artikelhelper.EXTRA_ARTIKEL
 import com.kofar.appuk.helper.artikelhelper.EXTRA_POSITION
@@ -59,17 +56,6 @@ class DataArtikelAdapterEdited(var listMyData: ArrayList<DataArtikel>, private v
                     .load(myData.gambar_artikel)
                     .apply(RequestOptions().override(55, 55))
                     .into(findViewById(R.id.gambar_artikel))
-
-                findViewById<CardView>(R.id.artikel_card_view).setOnClickListener{ Toast.makeText(itemView.context, "Kamu Membaca" + listMyData[adapterPosition].judul_artikel, Toast.LENGTH_SHORT).show() }
-
-                findViewById<CardView>(R.id.artikel_card_view).setOnClickListener {
-                    val moveWithObjectIntent = Intent(context, DetailArtikelActivity::class.java)
-                    activity.overridePendingTransition(0, 0);
-                    moveWithObjectIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    activity.overridePendingTransition(0, 0);
-                    moveWithObjectIntent.putExtra(DetailArtikelActivity.EXTRA_DATA_ARTIKEL, myData)
-                    context.startActivity(moveWithObjectIntent)
-                }
 
                 findViewById<Button>(R.id.edit_artikel).setOnClickListener{
                     val intent = Intent(activity, ArtikelAddUpdateActivity::class.java)

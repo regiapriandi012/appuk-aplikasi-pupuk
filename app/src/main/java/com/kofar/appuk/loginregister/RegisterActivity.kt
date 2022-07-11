@@ -1,5 +1,6 @@
 package com.kofar.appuk.loginregister
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -9,6 +10,7 @@ import com.kofar.appuk.R
 import com.kofar.appuk.WelcomeActivity
 
 class RegisterActivity : AppCompatActivity() {
+    @SuppressLint("CutPasteId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)

@@ -19,11 +19,14 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.kofar.appuk.addupdate.ArtikelAddUpdateActivity
 import com.kofar.appuk.addupdate.PupukAddUpdateActivity
+import com.kofar.appuk.data_user.UserPreference
 import com.kofar.appuk.listdataedited.ListDataArtikelEditedActivity
 import com.kofar.appuk.listdataedited.ListDataPupukEditedActivity
 
 
 class AkunActivity : AppCompatActivity() {
+
+    private lateinit var mSettingPreference: UserPreference
 
     companion object {
         private const val SMS_REQUEST_CODE = 101

@@ -121,7 +121,6 @@
         android:id="@+id/nama_home"
         android:layout_width="240dp"
         android:layout_height="30dp"
-        android:text="Regi Apriandi"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

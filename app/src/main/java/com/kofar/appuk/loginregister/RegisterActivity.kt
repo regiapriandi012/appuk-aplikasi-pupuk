@@ -3,41 +3,76 @@ package com.kofar.appuk.loginregister
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
+import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.kofar.appuk.R
-import com.kofar.appuk.WelcomeActivity
+import com.kofar.appuk.data_user.UserModel
+import com.kofar.appuk.data_user.UserPreference
+import com.kofar.appuk.databinding.ActivityRegisterBinding
 
-class RegisterActivity : AppCompatActivity() {
+class RegisterActivity : AppCompatActivity(), View.OnClickListener {
+
+    private lateinit var userPreference: UserPreference
+    private lateinit var settingModel: UserModel
+    private lateinit var binding: ActivityRegisterBinding
+
+    companion object {
+        const val RESULT_CODE = 101
+    }
+
+    private fun showPreferenceInForm() {
+        binding.nama.setText(settingModel.name)
+        binding.username.setText(settingModel.username)
+        binding.password1.setText(settingModel.password)
+    }
+
+    private fun saveSetting(name: String, username: String, password: String) {
+        val userPreference = UserPreference(this)
+        settingModel.name = name
+        settingModel.username = username
+        settingModel.password = password
+        userPreference.setSetting(settingModel)
+        Toast.makeText(this, "User Berhasil Dibuat, Silahkan Login", Toast.LENGTH_SHORT).show()
+    }
+
     @SuppressLint("CutPasteId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
         supportActionBar?.hide()
 
-        findViewById<Button>(R.id.register_button).setOnClickListener {
-            val nama = findViewById<EditText>(R.id.nama).text.toString()
-            val username = findViewById<EditText>(R.id.username).text.toString()
-            val password1 = findViewById<EditText>(R.id.password1).text.toString()
-            val password2 = findViewById<EditText>(R.id.password2).text.toString()
-            if (nama.isEmpty()) {
-                findViewById<EditText>(R.id.nama).error = "Nama Kosong"
-                return@setOnClickListener
-            } else if (username.isEmpty()) {
-                findViewById<EditText>(R.id.username).error = "Username Kosong"
-                return@setOnClickListener
-            } else if (password1.isEmpty()) {
-                findViewById<EditText>(R.id.password1).error = "Password Kosong"
-                return@setOnClickListener
-            } else if (password2.isEmpty()) {
-                findViewById<EditText>(R.id.password2).error = "Password Kosong"
-                return@setOnClickListener
-            }
+        binding = ActivityRegisterBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.registerButton.setOnClickListener(this)
+        userPreference = UserPreference(this)
+        settingModel = userPreference.getSetting()
+        showPreferenceInForm()
+        supportActionBar?.title = ""
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
 
-            val moveWithDataIntent = Intent(this@RegisterActivity, WelcomeActivity::class.java)
-            moveWithDataIntent.putExtra(WelcomeActivity.EXTRA_NAMA, nama)
-            startActivity(moveWithDataIntent)
+    override fun onClick(p0: View?) {
+        if (p0?.id == R.id.register_button) {
+            val name = binding.nama.text.toString().trim()
+            val username = binding.username.text.toString().trim()
+            val password = binding.password1.text.toString().trim()
+            if (name.isEmpty()) {
+                binding.nama.error = "Required"
+                return
+            }
+            if (username.isEmpty()) {
+                binding.username.error = "Required"
+                return
+            }
+            if (password.isEmpty()) {
+                binding.password1.error = "Required"
+                return
+            }
+            saveSetting(name, username, password)
+            val resultIntent = Intent()
+            setResult(RESULT_CODE, resultIntent)
+            finish()
         }
     }
 }

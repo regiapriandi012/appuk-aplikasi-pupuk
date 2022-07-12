@@ -6,10 +6,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.kofar.appuk.data_user.UserPreference
 import com.kofar.appuk.listdata.ListDataArtikel
 import com.kofar.appuk.listdata.ListDataPupuk
 
 class HomeActivity : AppCompatActivity() {
+    private lateinit var mSettingPreference: UserPreference
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
@@ -19,7 +22,6 @@ class HomeActivity : AppCompatActivity() {
         if(acct != null) {
             val personName = acct.displayName
             findViewById<TextView>(R.id.nama_home).text = personName
-
         }
 
         findViewById<ImageView>(R.id.imageView12).setOnClickListener {
